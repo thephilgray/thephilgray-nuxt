@@ -1,7 +1,7 @@
 <template lang="pug">
 header.site-header
     div.logo
-      img(src="~assets/logo.png")
+      img(src="~assets/Logo.svg")
     nav.scroll
       nuxt-link(to="/latest") Latest
       nuxt-link(to="/frontend") Front-end
@@ -17,8 +17,27 @@ export default {
    .site-header {
     text-align: center;
      display: flex;
+     flex-wrap: wrap;
      align-items: center;
-     margin-bottom: 3em;
+}
+@media screen and (min-width: 480px){
+  .site-header{
+    flex-wrap: nowrap;
+  }
+}
+
+.nuxt-link-active{
+  border-bottom: .75em solid #C2EAE9;
+      transform: skewX(-10deg);
+}
+.logo{
+  margin-right: 1em;
+  width: 100%;
+}
+@media screen and (min-width: 480px){
+  .logo{
+ width: auto; 
+  }
 }
 .scroll{
     display: flex;
@@ -29,7 +48,7 @@ export default {
   }
   .scroll > *{
      flex: 0 0 auto;
-    padding: 1em;
+    padding: 0 1em;
     font-size: 1.5em;
   }
   nav a {

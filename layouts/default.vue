@@ -22,38 +22,40 @@ export default {
 </script>
 
 <style>
-  *, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-  .site > * {
-    margin: 1em;
-  }
-  
- /** layout  **/
-  
-  @media screen and (min-width: 480px){
-     .site{
+
+.site>* {
+  margin: 0 1em;
+}
+
+
+/** layout  **/
+
+@media screen and (min-width: 480px) {
+  .site {
     display: grid;
-grid-template-columns: 1fr 3fr;
-grid-template-areas: "header header" "sidebar main" "footer footer";
-grid-template-rows: 1fr 3fr 1fr;
-max-width: 800px;
-margin: 0 auto;
-       color: #262427;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-rows: 150px 3fr 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #262427;
   }
   .site-header {
     grid-area: header;
-}
+  }
   .site-main {
     grid-area: main;
-}
+  }
   .wiget-area {
     grid-area: sidebar;
-
-}
+  }
   .site-footer {
     grid-area: footer;
-}
   }
- 
+}
 </style>
