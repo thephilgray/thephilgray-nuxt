@@ -1,38 +1,35 @@
 <template lang="pug">
   aside.wiget-area
-    header.widget-header
-      img.avatar(src="~assets/avatar400x400.png")
-    section.widget-content
-      p
-        strong Phil Gray
-      ul.skills
-        li UI
-        li Front-end
-        li Design
-        li Prototyping
-        li Development
-        li Documentation
-        li Copywriting
-        li Audio
-      p 30/M/US
-      a(href="https://twitter.com/thephilgray") @thephilgray
-    footer.widget-footer
-      .socialFollow
-        a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
-          i.fa.fa-twitter
-        a.socialFollow__icon(href="https://github.com/philgrayphilgray" alt="Follow me on Github")
-          i.fa.fa-github
+    div.widget--scroller
+      header.widget-header
+        img.avatar(src="~assets/avatar400x400.png")
+      section.widget-content
+        h3   Phil Gray
+        p 
+          em web auteur
+        footer.widget-footer
+          p @thephilgray
+          .socialFollow
+            a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
+              i.fa.fa-twitter
+            a.socialFollow__icon(href="https://github.com/philgrayphilgray" alt="Follow me on Github")
+              i.fa.fa-github
 </template> 
 <style lang="scss" scoped>
 .wiget-area {
-  background: rgba(250, 207, 215, .5);
+  background-image: radial-gradient(circle at center, rgba(250, 207, 215, .5), #fff);
   text-align: center;
+}
+
+.widget--scroller {
+  position: relative;
 }
 
 .widget-content {
   background: #C2EAE9;
   width: 100%;
   padding: 1em;
+  box-shadow: 0px 1px 6px #262427;
 }
 
 .avatar {
@@ -50,7 +47,7 @@
 }
 
 footer {
-  padding: 1em 0;
+  // padding: 1em 0;
 }
 
 .socialFollow {
@@ -63,7 +60,6 @@ footer {
 
 .socialFollow__icon {
   padding: 1em;
-  background: #A3A2A4;
   border-radius: 100%;
   width: 3.5em;
   height: 3.5em;
