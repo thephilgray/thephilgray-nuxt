@@ -37,32 +37,32 @@ main
                 .relevant-experience__item
                   .relevant-experience__years
                     span 04/2015 – present
-                  .relevant-experience__location
-                    small Washington, DC    
+                    .relevant-experience__location
+                      small Washington, DC    
                   h3 BSA | The Software Alliance
                   h4 Web Manager
-                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vero sequi esse, porro a tempora quibusdam corporis quod quam tenetur ab veritatis, soluta illum, laborum dolor. Repellendus nobis expedita et.
+                  p Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 11/2014 – 04/2015
-                  .relevant-experience__location
-                    small Washington, DC      
+                    .relevant-experience__location
+                      small Washington, DC      
                   h3 Department of Labor, Office of the Chief Financial Officer
                   p Release Management Coordinator, Data Specialist
                     span &nbsp;(contractor)
                 .relevant-experience__item
                   .relevant-experience__years
                     span 04/2014 – 11/2014
-                  .relevant-experience__location
-                    small Herndon, VA    
+                    .relevant-experience__location
+                      small Herndon, VA    
                   h3 BAE Systems IT
                   p Technical Writer
                     span &nbsp;(contractor)
                 .relevant-experience__item
                   .relevant-experience__years
                     span 12/2010 – 04/2014
-                  .relevant-experience__location
-                    small Portland, Oregon     
+                    .relevant-experience__location
+                      small Portland, Oregon
                   h3 ITPDX
                   p Web Content Editor, Technical Writer, Copywriter
                     span &nbsp;(independent consultant)
@@ -160,11 +160,27 @@ article.skills-and-tolls__icons {
   font-weight: 700;
 }
 
+.relevant-experience__years {
+  margin: .5em 0;
+}
+
 .relevant-experience__years span {
   background: #262427;
   color: #fff;
   border: 1px solid #262427;
   padding: .25em;
+}
+
+.relevant-experience__location {
+  display: inline;
+  margin-left: .5em;
+  border-bottom: .25em solid #262427;
+}
+
+.relevant-experience__item {
+  border-left: .25em solid #262427;
+  padding-left: .5em;
+  margin: 2em 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -175,6 +191,7 @@ article.skills-and-tolls__icons {
     grid-row: row 2;
     grid-template-columns: 1fr 1fr;
     .relevant-experience__item {
+      margin: .5em;
       &:nth-child(1) {
         grid-column: 1 / 3;
         grid-row: 1;
@@ -189,8 +206,12 @@ article.skills-and-tolls__icons {
       }
     }
   }
-  .relevant-experience__item:not(:last-child) {
-    border-bottom: 2px solid #262427;
+  .relevant-experience__item {
+    border-left: none;
+    padding-left: 0;
+    &:not(:last-child) {
+      border-bottom: 2px solid #262427;
+    }
   }
 }
 
