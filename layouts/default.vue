@@ -104,8 +104,18 @@ li li {
 }
 
 .site>* {
-  margin: 0 1em;
+  margin: 0 1em 1em;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -115,7 +125,7 @@ li li {
 
 /** layout  **/
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .site {
     display: grid;
     grid-template-columns: 1fr 3fr;
