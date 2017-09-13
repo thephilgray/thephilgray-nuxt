@@ -2,7 +2,7 @@
 header.site-header
     div.logo
       nuxt-link(to="/latest")
-        img(src="~assets/Logo.svg")
+        img(src="~assets/logo.svg")
     nav.scroll
       nuxt-link(to="/latest") Latest
       nuxt-link(to="/frontend") Front-end
