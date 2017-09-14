@@ -3,7 +3,8 @@ main
   h1 front-end
   p show some mockups, prototypes, process, etc
   flickity(ref="flickity", :options="flickityOptions")
-    .carousel-cell test 1
+    .carousel-cell
+      nuxt-link(to="/latest") Latest
     .carousel-cell test 2
 </template>
 <style>

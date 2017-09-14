@@ -22,6 +22,26 @@ main
         article.skills-and-tolls__tools
           h2 Tools
           p CSS, SASS, HTML5, JavaScript, Pug, jQuery, VueJS, React, Angular, MongoDB, Heroku, NodeJS, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
+          .icons
+            .icon-css.icon-css-dims
+            .icon-sass.icon-sass-dims
+            .icon-html5.icon-html5-dims
+            .icon-js.icon-js-dims
+            .icon-es6.icon-es6-dims
+            .icon-pug.icon-pug-dims
+            .icon-jquery.icon-jquery-dims
+            .icon-vue.icon-vue-dims
+            .icon-react.icon-react-dims
+            .icon-angular.icon-angular-dims
+            .icon-mongodb.icon-mongodb-dims
+            .icon-heroku.icon-heroku-dims
+            .icon-node.icon-node-dims
+            .icon-git.icon-git-dims
+            .icon-gulp.icon-gulp-dims
+            .icon-webpack.icon-webpack-dims
+            .icon-sketch.icon-sketch-dims
+            .icon-bootstrap.icon-bootstrap-dims
+            .icon-wordpress.icon-wordpress-dims
       transition(name="reveal")
         template(v-if="showRelevant")
           section.eductation-and-certs
@@ -69,6 +89,8 @@ main
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
+import '~/assets/icons/icons.svg'
+import '~/assets/iconizr-svg-sprite.css'
 export default {
   data() {
     return {
@@ -101,12 +123,13 @@ article.skills-and-tolls__icons {
   justify-content: space-between;
 }
 
+  .icons{
+    display: flex;
+    flex-wrap: wrap;
+/*     justify-content: space-between; */
+  }
 [class^='icon'] {
-  margin-top: .5em;
-  margin-bottom: .5em;
-  width: 50px;
-  width: 50%;
-  height: 50px;
+margin: .5em;
 }
 
 @media screen and (min-width: 768px) {
