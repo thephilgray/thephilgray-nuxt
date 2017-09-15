@@ -6,14 +6,14 @@
       section.widget-content
         h3   Phil Gray
         p 
-          em web auteur
+          em auteur du web
         footer.widget-footer
           p @thephilgray
           .socialFollow
             a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
-              i.fa.fa-twitter
+              i.icon-twitter
             a.socialFollow__icon(href="https://github.com/philgrayphilgray" alt="Follow me on Github")
-              i.fa.fa-github
+              i.icon-github
 </template> 
 <style lang="scss" scoped>
 .wiget-area {
@@ -56,6 +56,21 @@ footer {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+[class ^='icon-'] {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-size: 100%;
+}
+
+.icon-twitter {
+  background: url('~assets/icons/twitter.svg');
+}
+
+.icon-github {
+  background: url('~assets/icons/github.svg');
 }
 
 .socialFollow__icon {
