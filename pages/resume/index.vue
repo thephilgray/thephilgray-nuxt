@@ -7,7 +7,7 @@ main
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Designer/developer with six years of relevant industry experience as a web consultant, including three years of professional experience designing, prototyping, developing, and project managing cross-browser responsive sites.
+      p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser responsive sites.
       section.skills-and-tools
         article.skills-and-tools__skills
           h2 Skills
@@ -123,13 +123,14 @@ article.skills-and-tolls__icons {
   justify-content: space-between;
 }
 
-  .icons{
-    display: flex;
-    flex-wrap: wrap;
-/*     justify-content: space-between; */
-  }
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  /*     justify-content: space-between; */
+}
+
 [class^='icon'] {
-margin: .5em;
+  margin: .5em;
 }
 
 @media screen and (min-width: 768px) {
