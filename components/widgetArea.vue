@@ -35,9 +35,6 @@
 .avatar {
   border-radius: 50%;
   margin: .5em 0;
-  @media screen and (min-width: 480px) {
-    // margin-top: -50px;
-  }
 }
 
 .skills {
