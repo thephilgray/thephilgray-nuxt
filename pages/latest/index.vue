@@ -1,22 +1,22 @@
 <template lang="pug">
 main
-  article
-    h2 {{word}}
-  article
-    h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eligendi alias natus qui deleniti commodi officia dolores, possimus vel, magni aliquid ratione perspiciatis optio! Amet incidunt delectus commodi rerum consequuntur?
-  
+  article(v-if="latestPost")
+    h2 {{latestPost}}
 </template>
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   data() {
     return {
-      word: 'word'
+      posts: [],
+      latestPost: ''
     }
+  },
+  async mounted() {
+    this.latestPost = await axios.get(`https://spreadsheets.google.com/feeds/list/18Cp7E1R8ZRWp-W4vQ1TbhbWLU8rB-jQ-DN9Tp2cur6c/od6/public/values?alt=json`).then(res => res.data.feed.entry).then(p => p.slice(-1).pop().gsx$value.$t)
   }
 }
 </script>
-
 <style lang="scss" scoped>
 article {
   background: #F8EFB6;
