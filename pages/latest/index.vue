@@ -7,11 +7,11 @@ main
   
 </template>
 <script>
-// import Flickity from 'vue-flickity'
+// import axios from 'axios'
 export default {
   data() {
     return {
-      word: 'test'
+      word: 'word'
     }
   }
 }

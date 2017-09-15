@@ -5,6 +5,8 @@
   "author": "phil.nametheanimal <phil.nametheanimal@gmail.com>",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "generate-device-screenshots": "^1.2.5",
     "latest-tweets": "^1.0.3",
     "node-sass": "^4.5.3",
     "nuxt": "latest",
