@@ -26,20 +26,11 @@ module.exports = {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href:
-          'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
-      },
-            {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href:
-          'https://unpkg.com/flickity@2/dist/flickity.min.css'
+        href: 'https://unpkg.com/flickity@2/dist/flickity.min.css'
       }
     ]
   },
-  plugins: [
-    { src: '~/plugins/vue-flickity', ssr: false }
-],
+  plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
   /*
   ** Customize the progress-bar color
   */
