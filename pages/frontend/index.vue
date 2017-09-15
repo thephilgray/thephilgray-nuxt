@@ -4,25 +4,25 @@ main
   p show some mockups, prototypes, process, etc
   flickity(ref="flickity", :options="flickityOptions")
     .carousel-cell
-      nuxt-link(to="/latest") Latest
-    .carousel-cell test 2
+      img(src="~assets/screens/sp2.png")
 </template>
-<style>
-  .carousel-cell{
-    width: 100%;
-    background: #000;
-    color: #fff;
+<style scoped lang="scss">
+.carousel-cell {
+  width: 100%;
+  img {
+    max-width: 100%;
   }
+}
 </style>
 <script>
 export default {
   data() {
     return {
       flickityOptions: {
-        initialIndex: 3,
         prevNextButtons: false,
         pageDots: false,
-        wrapAround: true
+        wrapAround: true,
+        autoPlay: true
         // any options from Flickity can be used
       }
     }
