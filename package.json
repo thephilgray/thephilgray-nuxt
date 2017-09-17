@@ -16,7 +16,8 @@
     "sass-loader": "^6.0.6",
     "susy": "^3.0.0",
     "vue-axios": "^2.0.2",
-    "vue-flickity": "^1.0.8"
+    "vue-flickity": "^1.0.8",
+    "vue-touch": "^2.0.0-beta.4"
   },
   "scripts": {
     "dev": "nuxt",

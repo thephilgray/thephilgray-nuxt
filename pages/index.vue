@@ -1,15 +1,16 @@
 <template lang="pug">
 main
-  header.latest-header
-    p The latest posts from my Facebook and Twitter.
-  article(v-if="latestPost", v-for="post in latestPost")
-    a(v-if="post.gsx$url.$t", :href="post.gsx$url.$t") {{post.gsx$handle.$t}}
-    p(v-else) Facebook
-    blockquote
-      .sm-post(v-html="raw(post.gsx$value.$t)") 
-    p {{post.gsx$date.$t}}
-  div(v-else)
-    .spinner      
+  v-touch(@swipeleft="onswipeleft" class="dragme")
+    header.latest-header
+      p The latest posts from my Facebook and Twitter.
+    article(v-if="latestPost", v-for="post in latestPost")
+      a(v-if="post.gsx$url.$t", :href="post.gsx$url.$t") {{post.gsx$handle.$t}}
+      p(v-else) Facebook
+      blockquote
+        .sm-post(v-html="raw(post.gsx$value.$t)") 
+      p {{post.gsx$date.$t}}
+    div(v-else)
+      .spinner      
 </template>
 <script>
 import axios from 'axios'
@@ -29,6 +30,9 @@ export default {
     },
     raw(text) {
       return `<h3>${this.uglify(text)}</h3>`
+    },
+    onswipeleft() {
+      this.$router.push({ path: '/frontend' })
     }
   },
   async mounted() {

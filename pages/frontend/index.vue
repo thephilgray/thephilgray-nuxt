@@ -1,6 +1,7 @@
 <template lang="pug">
 main
-  h1 Front-end
+  v-touch(@swipeleft="onswipeleft" class="dragme")
+    h1 Front-end
   no-ssr  
     flickity(ref="flickity", :options="flickityOptions")
       .carousel-cell
@@ -13,8 +14,9 @@ main
         img.carousel-cell-img(src="~assets/screens/tp.gif")
       .carousel-cell
         img.carousel-cell-img(src="~assets/screens/eiu.gif")
-  h2 Intricate responsive designs with modular CSS and JS.
-  p Above are examples of some of the sites I've built in production.
+  v-touch(@swipeleft="onswipeleft" class="dragme")
+    h2 Intricate responsive designs with modular CSS and JS.
+    p Above are examples of some of the sites I've built in production.
 </template>
 <style scoped lang="scss">
 .carousel {
@@ -57,6 +59,11 @@ export default {
         autoPlay: true,
         imagesLoaded: true
       }
+    }
+  },
+  methods: {
+    onswipeleft() {
+      this.$router.push({ path: '/resume' })
     }
   }
 }

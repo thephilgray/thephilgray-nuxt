@@ -1,95 +1,96 @@
 <template lang="pug">
 main
-  header.main-header
-    h1.main-header__name Phil Gray
-    p.main-header__title
-      strong Web Manager, UX Developer
-    no-ssr
-      .icon-printer(@click="print")
-  section.main-section
-    article.main-section__overview
-      h2 Overview
-      p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser responsive sites.
-      section.skills-and-tools
-        article.skills-and-tools__skills
-          h2 Skills
-          .skills-and-tools__skills-list
-            .skills-and-tools__skills-item(v-for="(skill, index) in skills")
-              .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
-              .skills-item__header
-                h3 {{skill.title}}
-              .skills-item__graphic
-                .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
-                  small {{skill.level}}%
-        article.skills-and-tolls__tools
-          h2 Tools
-          p CSS, SASS, HTML5, JavaScript, Pug, jQuery, VueJS, React, Angular, MongoDB, Heroku, NodeJS, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
-          .icons
-            .icon-css.icon-css-dims
-            .icon-sass.icon-sass-dims
-            .icon-html5.icon-html5-dims
-            .icon-js.icon-js-dims
-            .icon-es6.icon-es6-dims
-            .icon-pug.icon-pug-dims
-            .icon-jquery.icon-jquery-dims
-            .icon-vue.icon-vue-dims
-            .icon-react.icon-react-dims
-            .icon-angular.icon-angular-dims
-            .icon-mongodb.icon-mongodb-dims
-            .icon-heroku.icon-heroku-dims
-            .icon-nodejs.icon-nodejs-dims
-            .icon-git.icon-git-dims
-            .icon-gulp.icon-gulp-dims
-            .icon-webpack.icon-webpack-dims
-            .icon-sketch.icon-sketch-dims
-            .icon-bootstrap.icon-bootstrap-dims
-            .icon-wordpress.icon-wordpress-dims
-      transition(name="reveal")
-        section.eductation-and-certs(v-if="showRelevant")
-          article.eductation-and-certs__education
-            h2 Education
-            p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
-          article.eductation-and-certs__education  
-            h2 Certifications
-            ul
-              li (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
-              li Comp TIA Security+ Certification (2013 – 2016, inactive)
-            article.relevant-experience
-              h2 Relevant Experience
-              .relevant-experience__list
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 04/2015 – present
-                    .relevant-experience__location
-                      small Washington, DC    
-                  h3 BSA | The Software Alliance
-                  h4 Web Manager
-                  p Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 11/2014 – 04/2015
-                    .relevant-experience__location
-                      small Washington, DC      
-                  h3 Department of Labor, Office of the Chief Financial Officer
-                  p Release Management Coordinator, Data Specialist
-                    span &nbsp;(contractor)
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 04/2014 – 11/2014
-                    .relevant-experience__location
-                      small Herndon, VA    
-                  h3 BAE Systems IT
-                  p Technical Writer
-                    span &nbsp;(contractor)
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 12/2010 – 04/2014
-                    .relevant-experience__location
-                      small Portland, Oregon
-                  h3 ITPDX
-                  p Web Content Editor, Technical Writer, Copywriter
-                    span &nbsp;(independent consultant)
-      .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
+  v-touch(@swipeleft="onswipeleft" class="dragme")
+    header.main-header
+      h1.main-header__name Phil Gray
+      p.main-header__title
+        strong Web Manager, UX Developer
+      no-ssr
+        .icon-printer(@click="print")
+    section.main-section
+      article.main-section__overview
+        h2 Overview
+        p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser responsive sites.
+        section.skills-and-tools
+          article.skills-and-tools__skills
+            h2 Skills
+            .skills-and-tools__skills-list
+              .skills-and-tools__skills-item(v-for="(skill, index) in skills")
+                .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
+                .skills-item__header
+                  h3 {{skill.title}}
+                .skills-item__graphic
+                  .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
+                    small {{skill.level}}%
+          article.skills-and-tolls__tools
+            h2 Tools
+            p CSS, SASS, HTML5, JavaScript, Pug, jQuery, VueJS, React, Angular, MongoDB, Heroku, NodeJS, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
+            .icons
+              .icon-css.icon-css-dims
+              .icon-sass.icon-sass-dims
+              .icon-html5.icon-html5-dims
+              .icon-js.icon-js-dims
+              .icon-es6.icon-es6-dims
+              .icon-pug.icon-pug-dims
+              .icon-jquery.icon-jquery-dims
+              .icon-vue.icon-vue-dims
+              .icon-react.icon-react-dims
+              .icon-angular.icon-angular-dims
+              .icon-mongodb.icon-mongodb-dims
+              .icon-heroku.icon-heroku-dims
+              .icon-nodejs.icon-nodejs-dims
+              .icon-git.icon-git-dims
+              .icon-gulp.icon-gulp-dims
+              .icon-webpack.icon-webpack-dims
+              .icon-sketch.icon-sketch-dims
+              .icon-bootstrap.icon-bootstrap-dims
+              .icon-wordpress.icon-wordpress-dims
+        transition(name="reveal")
+          section.eductation-and-certs(v-if="showRelevant")
+            article.eductation-and-certs__education
+              h2 Education
+              p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
+            article.eductation-and-certs__education  
+              h2 Certifications
+              ul
+                li (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
+                li Comp TIA Security+ Certification (2013 – 2016, inactive)
+              article.relevant-experience
+                h2 Relevant Experience
+                .relevant-experience__list
+                  .relevant-experience__item
+                    .relevant-experience__years
+                      span 04/2015 – present
+                      .relevant-experience__location
+                        small Washington, DC    
+                    h3 BSA | The Software Alliance
+                    h4 Web Manager
+                    p Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
+                  .relevant-experience__item
+                    .relevant-experience__years
+                      span 11/2014 – 04/2015
+                      .relevant-experience__location
+                        small Washington, DC      
+                    h3 Department of Labor, Office of the Chief Financial Officer
+                    p Release Management Coordinator, Data Specialist
+                      span &nbsp;(contractor)
+                  .relevant-experience__item
+                    .relevant-experience__years
+                      span 04/2014 – 11/2014
+                      .relevant-experience__location
+                        small Herndon, VA    
+                    h3 BAE Systems IT
+                    p Technical Writer
+                      span &nbsp;(contractor)
+                  .relevant-experience__item
+                    .relevant-experience__years
+                      span 12/2010 – 04/2014
+                      .relevant-experience__location
+                        small Portland, Oregon
+                    h3 ITPDX
+                    p Web Content Editor, Technical Writer, Copywriter
+                      span &nbsp;(independent consultant)
+        .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
 import '~/assets/icons/icons.svg'
@@ -112,6 +113,9 @@ export default {
   methods: {
     print() {
       window.print()
+    },
+    onswipeleft() {
+      this.$router.push({ path: '/music' })
     }
   }
 }

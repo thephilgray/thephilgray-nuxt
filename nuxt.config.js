@@ -31,7 +31,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-flickity', ssr: false },
+    { src: '~/plugins/vue-touch', ssr: false }
+  ],
   /*
   ** Customize the progress-bar color
   */
