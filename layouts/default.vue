@@ -23,20 +23,17 @@ export default {
 
 <style lang="scss">
 .site>* {
-  margin: 0 1em 1em;
+  margin: 0 .25em 1em;
 }
-
-
-
-
-
-
-
 
 
 /** layout  **/
 
 @media screen and (min-width: 768px) {
+  .site>* {
+    margin: 0 1em 1em;
+  }
+
   .site {
     display: grid;
     grid-template-columns: 1fr 3fr;

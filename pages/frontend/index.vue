@@ -33,7 +33,6 @@ main
 .carousel-cell-img {
   width: 100%;
   height: auto;
-  padding: 1em;
   display: block;
 }
 

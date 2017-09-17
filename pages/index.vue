@@ -42,7 +42,7 @@ export default {
 article {
   background: #F8EFB6;
   text-align: center;
-  padding: 1em;
+  padding: .25em;
   border: .25em solid #262427;
 }
 

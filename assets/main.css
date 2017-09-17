@@ -6,10 +6,10 @@
 
 body {
   font: 100%/1.6 "Lora", serif;
-  font-weight: 400; // margin: 0 auto;
-  padding: 2em;
+  font-weight: 400;
+  padding: 1em 0.5em;
   text-align: left;
-  font-kerning: normal; // max-width: 45em;
+  font-kerning: normal;
 }
 
 p + p {
