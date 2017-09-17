@@ -45,15 +45,16 @@ main
             .icon-bootstrap.icon-bootstrap-dims
             .icon-wordpress.icon-wordpress-dims
       transition(name="reveal")
-        template(v-if="showRelevant")
-          section.eductation-and-certs
+        section.eductation-and-certs(v-if="showRelevant")
+          article.eductation-and-certs__education
             h2 Education
             p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
+          article.eductation-and-certs__education  
             h2 Certifications
             ul
               li (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
               li Comp TIA Security+ Certification (2013 – 2016, inactive)
-            section.relevant-experience
+            article.relevant-experience
               h2 Relevant Experience
               .relevant-experience__list
                 .relevant-experience__item
@@ -290,6 +291,9 @@ article.skills-and-tolls__icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
+  }
+  article.relevant-experience {
+    page-break-before: always; //TODO: hack
   }
   .relevant-experience__list {
     display: grid;

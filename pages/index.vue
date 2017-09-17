@@ -3,7 +3,8 @@ main
   header.latest-header
     p The latest posts from my Facebook and Twitter.
   article(v-if="latestPost", v-for="post in latestPost")
-    a(:href="post.gsx$url.$t") {{post.gsx$handle.$t}}
+    a(v-if="post.gsx$url.$t", :href="post.gsx$url.$t") {{post.gsx$handle.$t}}
+    p(v-else) Facebook
     blockquote
       .sm-post(v-html="raw(post.gsx$value.$t)") 
     p {{post.gsx$date.$t}}
