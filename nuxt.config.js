@@ -54,5 +54,13 @@ module.exports = {
       }
     },
     vendor: ['axios']
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/',
+        redirect: '/latest'
+      })
+    }
   }
 }
