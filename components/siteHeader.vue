@@ -1,10 +1,10 @@
 <template lang="pug">
 header.site-header
     div.logo
-      nuxt-link(to="/latest")
+      nuxt-link(to="/")
         img(src="~assets/logo.svg")
     nav.scroll
-      nuxt-link(to="/latest") Latest
+      nuxt-link(to="/") Latest
       nuxt-link(to="/frontend") Front-end
       nuxt-link(to="/resume") Resume
       nuxt-link(to="/music") Music
