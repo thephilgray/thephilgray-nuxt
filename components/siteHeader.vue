@@ -63,5 +63,11 @@ nav a {
   text-decoration: none;
   color: #262427;
 }
+
+@media print {
+  .site-header {
+    display: none;
+  }
+}
 </style>
 
