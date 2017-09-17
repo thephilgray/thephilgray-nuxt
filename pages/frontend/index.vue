@@ -13,8 +13,20 @@ main
         img.carousel-cell-img(src="~assets/screens/tp.gif")
       .carousel-cell
         img.carousel-cell-img(src="~assets/screens/eiu.gif")
+      .carousel-cell
+        .carousel-cell__content
+          h3 Rapid Prototyping  
+      .carousel-cell
+        iframe(height='500', scrolling='no', title='vue-flashcards prototype-3', src='//codepen.io/phillipgray/embed/ZyZJeK/?height=548&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+      .carousel-cell
+        .carousel-cell__content
+          h3 Framework-free Reactive Programming       
+      .carousel-cell
+        iframe(height='500', scrolling='no', title='spaceInvaders()', src='//codepen.io/phillipgray/embed/ZJPXwe/?height=566&theme-id=0&default-tab=js&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+      .carousel-cell
+        iframe(height='500', scrolling='no', title='reactic-tac-no-framework', src='//codepen.io/phillipgray/embed/LjOqQa/?height=383&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
   h2 Intricate responsive designs with modular CSS and JS.
-  p Above are examples of some of the sites I've built in production.
+  p Above are examples of some of the sites I've built in production, followed by a couple interactive demos.
 </template>
 <style scoped lang="scss">
 .carousel {
@@ -25,9 +37,14 @@ main
 .carousel-cell {
   width: 100%;
   height: auto;
+  min-height: 100%;
+}
+
+.carousel-cell__content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 500px;
 }
 
 .carousel-cell-img {
@@ -54,8 +71,7 @@ export default {
         prevNextButtons: false,
         pageDots: false,
         wrapAround: true,
-        autoPlay: true,
-        imagesLoaded: true
+        autoPlay: true
       }
     }
   }
