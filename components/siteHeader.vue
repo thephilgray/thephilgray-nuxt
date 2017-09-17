@@ -4,7 +4,7 @@ header.site-header
       nuxt-link(to="/")
         img(src="~assets/logo.svg")
     nav.scroll
-      nuxt-link(to="/") Latest
+      nuxt-link(to="/" exact) Latest
       nuxt-link(to="/frontend") Front-end
       nuxt-link(to="/resume") Resume
       nuxt-link(to="/music") Music
