@@ -3,7 +3,7 @@ main
   header.main-header
     h1.main-header__name Phil Gray
     p.main-header__title
-      strong &#8227; Web Manager, UX Developer
+      strong Web Manager, UX Developer
     no-ssr
       .icon-printer(@click="print")
   section.main-section
@@ -126,6 +126,11 @@ export default {
 
 .main-header__name {
   padding-right: 1em;
+  flex: 3;
+}
+
+.main-header__title {
+  flex: 2;
 }
 
 article.skills-and-tolls__icons {
