@@ -2,7 +2,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  css: ['assets/main.css'],
+  css: ['assets/main.css', { src: 'flickity/css/flickity.css', lang: 'css' }],
   head: {
     title: 'thephilgray',
     meta: [
@@ -23,11 +23,6 @@ module.exports = {
         type: 'text/css',
         href:
           'https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
-      },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: 'https://unpkg.com/flickity@2/dist/flickity.min.css'
       }
     ]
   },
