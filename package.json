@@ -7,10 +7,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^4.3.0",
     "axios": "^0.16.2",
-    "generate-device-screenshots": "^1.2.5",
+    "flickity-imagesloaded": "^2.0.0",
     "latest-tweets": "^1.0.3",
     "node-sass": "^4.5.3",
-    "nuxt": "latest",
+    "nuxt": "^1.0.0-rc7",
     "pug": "^2.0.0-rc.2",
     "sass": "^1.0.0-beta.2",
     "sass-loader": "^6.0.6",
