@@ -4,6 +4,8 @@ main
     h1.main-header__name Phil Gray
     p.main-header__title
       strong &#8227; Web Manager, UX Developer
+    no-ssr
+      .icon-printer(@click="print")
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -35,7 +37,7 @@ main
             .icon-angular.icon-angular-dims
             .icon-mongodb.icon-mongodb-dims
             .icon-heroku.icon-heroku-dims
-            .icon-node.icon-node-dims
+            .icon-nodejs.icon-nodejs-dims
             .icon-git.icon-git-dims
             .icon-gulp.icon-gulp-dims
             .icon-webpack.icon-webpack-dims
@@ -103,7 +105,12 @@ export default {
         { title: 'Web App Development', level: 40 },
         { title: 'Consulting | Project Management', level: 70 }
       ],
-      showRelevant: false
+      showRelevant: true
+    }
+  },
+  methods: {
+    print() {
+      window.print()
     }
   }
 }
@@ -115,6 +122,10 @@ export default {
   align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.main-header__name {
+  padding-right: 1em;
 }
 
 article.skills-and-tolls__icons {
@@ -131,6 +142,17 @@ article.skills-and-tolls__icons {
 
 [class^='icon'] {
   margin: .5em;
+}
+
+.icon-printer {
+  display: block;
+  float: right;
+  height: 3em;
+  width: 3em;
+  background-size: 100%;
+  background: url('~assets/icons/printer.svg');
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -247,5 +269,92 @@ article.skills-and-tolls__icons {
 .reveal-enter,
 .reveal-leave-to {
   opacity: 0;
+}
+
+@media print {
+  .site-header,
+  .wiget-area,
+  .icon-printer,
+  .icons,
+  .btn,
+  .skills-item__icon,
+  .skills-item__graphic {
+    display: none;
+  }
+  .skills-and-tools__skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .relevant-experience__list {
+    display: grid;
+    grid-gap: 1em;
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    grid-template-columns: 1fr 1fr;
+  }
+  .relevant-experience__list .relevant-experience__item {
+    margin: 0.5em;
+  }
+  .relevant-experience__list .relevant-experience__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .relevant-experience__list .relevant-experience__item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .relevant-experience__list .relevant-experience__item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .relevant-experience__item {
+    border-left: none;
+    padding-left: 0;
+  }
+  .relevant-experience__item:not(:last-child) {
+    // border-bottom: 2px solid #262427;
+    border-bottom: 2px solid #999;
+  }
+  .relevant-experience__location {
+    border-bottom: .25em solid #999;
+  }
+  .skills-and-tools__skills-list {
+    font-size: 1em;
+    display: inline;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  .skills-and-tools__skills-item {
+    background: none;
+    border: none;
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .skills-and-tools__skills-item+.skills-and-tools__skills-item:before {
+    display: inline;
+    float: left;
+    content: ',\00a0';
+  }
+  .skills-item__header {
+
+    h3 {
+      font-size: 1em;
+      display: inline;
+      float: left;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+      font-weight: normal;
+    }
+  }
 }
 </style>
