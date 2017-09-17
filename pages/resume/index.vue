@@ -127,11 +127,6 @@ export default {
 
 .main-header__name {
   padding-right: 1em;
-  flex: 3;
-}
-
-.main-header__title {
-  flex: 2;
 }
 
 article.skills-and-tolls__icons {
@@ -151,7 +146,7 @@ article.skills-and-tolls__icons {
 }
 
 .icon-printer {
-  display: block;
+  display: none;
   float: right;
   height: 3em;
   width: 3em;
@@ -162,6 +157,9 @@ article.skills-and-tolls__icons {
 }
 
 @media screen and (min-width: 768px) {
+  .icon-printer {
+    display: block;
+  }
   .skills-and-tools__skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
