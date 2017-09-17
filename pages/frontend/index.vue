@@ -4,15 +4,15 @@ main
   no-ssr  
     flickity(ref="flickity", :options="flickityOptions")
       .carousel-cell
-        img.carousel-cell-img(src="~assets/screens/eueiu_screen3.gif")
+        img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif")
       .carousel-cell
-        img.carousel-cell-img(src="~assets/screens/encryption.gif")
+        img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/encryption.gif")
       .carousel-cell
-        img.carousel-cell-img(src="~assets/screens/ckscreen.gif")
+        img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/ckscreen.gif")
       .carousel-cell
-        img.carousel-cell-img(src="~assets/screens/tp.gif")
+        img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif")
       .carousel-cell
-        img.carousel-cell-img(src="~assets/screens/eiu.gif")
+        img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif")
       .carousel-cell
         .carousel-cell__content
           h3 Rapid Prototyping  
