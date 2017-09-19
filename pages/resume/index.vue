@@ -70,7 +70,7 @@ main
                     span 11/2014 – 04/2015
                     .relevant-experience__location
                       small Washington, DC      
-                  h3.relevant-experinece__company Department of Labor, Office of the Chief Financial Officer
+                  h3.relevant-experinece__company Department of Labor
                   h4.relevant-experinece__title Release Management Coordinator, Data Specialist
                     span &nbsp;(contractor)
                   p.relevant-experinece__description Coordinated testing and deployment with federal customer and developers. Supported the technology team with application testing, workflow analysis, reporting, data entry, data analysis, and documentation.
