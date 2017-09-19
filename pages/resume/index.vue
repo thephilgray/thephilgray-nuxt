@@ -82,7 +82,7 @@ main
                   h3.relevant-experinece__company BAE Systems IT
                   h4.relevant-experinece__title Technical Writer
                     span &nbsp;(contractor)
-                  p.relevant-experinece__description Supported the Service Management and Engineering Framework Management teams, helping to maintain and improve ITIL-based policies, processes, and procedures. Created ISO 20K-compliant Documentation Management processes and custom solutions with SharePoint and InfoPath.
+                  p.relevant-experinece__description Supported the Service Management and Engineering Framework Management teams, helping to maintain and improve ITIL-based policies, processes, and procedures.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 12/2010 – 04/2014
@@ -91,7 +91,7 @@ main
                   h3.relevant-experinece__company ITPDX
                   h4.relevant-experinece__title Web Content Editor, Technical Writer, Copywriter
                     span &nbsp;(independent consultant)
-                  p.relevant-experinece__description Wrote user and API documentation for custom e-commerce solutions. Provided web content management and training for numerous small to medium-sized businesses.
+                  p.relevant-experinece__description Wrote user and API documentation for custom e-commerce solutions. Provided web content management and training.
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
