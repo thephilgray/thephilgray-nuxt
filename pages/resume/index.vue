@@ -62,33 +62,36 @@ main
                     span 04/2015 – present
                     .relevant-experience__location
                       small Washington, DC    
-                  h3 BSA | The Software Alliance
-                  h4 Web Manager
-                  p Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
+                  h3.relevant-experinece__company BSA | The Software Alliance
+                  h4.relevant-experinece__title Web Manager
+                  p.relevant-experinece__description Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 11/2014 – 04/2015
                     .relevant-experience__location
                       small Washington, DC      
-                  h3 Department of Labor, Office of the Chief Financial Officer
-                  p Release Management Coordinator, Data Specialist
+                  h3.relevant-experinece__company Department of Labor, Office of the Chief Financial Officer
+                  h4.relevant-experinece__title Release Management Coordinator, Data Specialist
                     span &nbsp;(contractor)
+                  p.relevant-experinece__description Coordinated testing and deployment with federal customer and developers. Supported the technology team with application testing, workflow analysis, reporting, data entry, data analysis, and documentation.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 04/2014 – 11/2014
                     .relevant-experience__location
                       small Herndon, VA    
-                  h3 BAE Systems IT
-                  p Technical Writer
+                  h3.relevant-experinece__company BAE Systems IT
+                  h4.relevant-experinece__title Technical Writer
                     span &nbsp;(contractor)
+                  p.relevant-experinece__description Supported the Service Management and Engineering Framework Management teams, helping to maintain and improve ITIL-based policies, processes, and procedures. Created ISO 20K-compliant Documentation Management processes and custom solutions with SharePoint and InfoPath.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 12/2010 – 04/2014
                     .relevant-experience__location
                       small Portland, Oregon
-                  h3 ITPDX
-                  p Web Content Editor, Technical Writer, Copywriter
+                  h3.relevant-experinece__company ITPDX
+                  h4.relevant-experinece__title Web Content Editor, Technical Writer, Copywriter
                     span &nbsp;(independent consultant)
+                  p.relevant-experinece__description Wrote user and API documentation for custom e-commerce solutions. Provided web content management and training for numerous small to medium-sized businesses.
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
@@ -231,6 +234,10 @@ article.skills-and-tolls__icons {
   border-left: .25em solid #262427;
   padding-left: .5em;
   margin: 2em 0;
+}
+
+.relevant-experience__item:not(:first-child) .relevant-experinece__title {
+  font-size: 100%;
 }
 
 @media screen and (min-width: 768px) {
