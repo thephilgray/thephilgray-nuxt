@@ -25,7 +25,7 @@ main
         iframe(height='500', scrolling='no', title='spaceInvaders()', src='//codepen.io/phillipgray/embed/ZJPXwe/?height=566&theme-id=0&default-tab=js&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
       .carousel-cell
         iframe(height='500', scrolling='no', title='reactic-tac-no-framework', src='//codepen.io/phillipgray/embed/LjOqQa/?height=383&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-  h2 Intricate responsive designs with modular CSS and JS.
+  h2 Responsive designs with modular CSS and JS.
   p Above are examples of some of the sites I've built in production, followed by a couple interactive demos.
 </template>
 <style scoped lang="scss">
