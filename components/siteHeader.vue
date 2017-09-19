@@ -7,7 +7,6 @@ header.site-header
       nuxt-link(to="/" exact) Latest
       nuxt-link(to="/frontend") Front-end
       nuxt-link(to="/resume") Resume
-      nuxt-link(to="/music") Music
       nuxt-link(to="/qa") Q&A
 </template>
 <script>
