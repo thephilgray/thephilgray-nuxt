@@ -3,13 +3,13 @@ main
   header.main-header
     h1.main-header__name Phil Gray
     p.main-header__title
-      strong Web Manager, UX Developer
+      strong Front-End Developer
     no-ssr
       .icon-printer(@click="print")
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser responsive sites.
+      p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser, responsive sites and features professionally.
       section.skills-and-tools
         article.skills-and-tools__skills
           h2 Skills
@@ -64,7 +64,7 @@ main
                       small Washington, DC    
                   h3.relevant-experinece__company BSA | The Software Alliance
                   h4.relevant-experinece__title Web Manager
-                  p.relevant-experinece__description Manages sites for global organization and its foundation. Oversees content management, development, reporting, and migrations. Designs, develops, and customizes new properties for targeted campaigns.
+                  p.relevant-experinece__description Manages sites for global organization and its new foundation, Software.org. Oversees content management, development, reporting, and migrations. Designs and develops interactive features, themes, emails, surveys, and microsites.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 11/2014 – 04/2015
@@ -101,13 +101,13 @@ export default {
   data() {
     return {
       skills: [
-        { title: 'Web Design | Theming', level: 80 },
-        { title: 'Animation | Visualization', level: 60 },
-        { title: 'Wireframes | Prototyping', level: 80 },
-        { title: 'Documentation | Workflows', level: 80 },
-        { title: 'UI Design | Style Guides', level: 70 },
-        { title: 'Web App Development', level: 40 },
-        { title: 'Consulting | Project Management', level: 70 }
+        { title: 'Web Design | Theming', level: 90 },
+        { title: 'Animation | Visualization', level: 80 },
+        { title: 'Wireframes | Prototyping', level: 90 },
+        { title: 'Documentation | Workflows', level: 90 },
+        { title: 'UI Design | Style Guides', level: 90 },
+        { title: 'Web App Development', level: 70 },
+        { title: 'Consulting | Project Management', level: 80 }
       ],
       showRelevant: true
     }
