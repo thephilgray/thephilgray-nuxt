@@ -50,6 +50,7 @@ nav .nuxt-link-active {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   background-attachment: local, local, scroll, scroll;
+  padding: 1em;
 }
 
 .scroll>* {
