@@ -127,8 +127,7 @@ export default {
             window.print()
           }, 1000)
         })
-      }
-      else {
+      } else {
         window.print()
       }
     }
