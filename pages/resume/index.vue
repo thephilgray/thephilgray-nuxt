@@ -128,6 +128,9 @@ export default {
           }, 1000)
         })
       }
+      else {
+        window.print()
+      }
     }
   }
 }
