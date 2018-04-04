@@ -9,7 +9,7 @@ main
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Designer/developer with six years of relevant industry experience as a web consultant, including three years designing, prototyping, developing, and project managing cross-browser, responsive sites and features professionally.
+      p Web developer with emphasis on UX and the front-end and a background in digital marketing, web content development, and technical writing.
       section.skills-and-tools
         article.skills-and-tools__skills
           h2 Skills
@@ -23,7 +23,7 @@ main
                   small {{skill.level}}%
         article.skills-and-tolls__tools
           h2 Tools
-          p CSS, SASS, HTML5, JavaScript, Pug, jQuery, VueJS, React, Angular, MongoDB, Heroku, NodeJS, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
+          p CSS, SASS, HTML5, JavaScript, Pug, VueJS, React, Angular, jQuery, Next, Nuxt, Jekyll, NodeJS, Express, Chai, Mocha, Jest, MongoDB, GraphQL, Apollo, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
           .icons
             .icon-css.icon-css-dims
             .icon-sass.icon-sass-dims
@@ -31,16 +31,15 @@ main
             .icon-js.icon-js-dims
             .icon-es6.icon-es6-dims
             .icon-pug.icon-pug-dims
-            .icon-jquery.icon-jquery-dims
             .icon-vue.icon-vue-dims
             .icon-react.icon-react-dims
             .icon-angular.icon-angular-dims
+            .icon-jquery.icon-jquery-dims
             .icon-mongodb.icon-mongodb-dims
-            .icon-heroku.icon-heroku-dims
             .icon-nodejs.icon-nodejs-dims
+            .icon-webpack.icon-webpack-dims
             .icon-git.icon-git-dims
             .icon-gulp.icon-gulp-dims
-            .icon-webpack.icon-webpack-dims
             .icon-sketch.icon-sketch-dims
             .icon-bootstrap.icon-bootstrap-dims
             .icon-wordpress.icon-wordpress-dims
@@ -59,12 +58,19 @@ main
               .relevant-experience__list
                 .relevant-experience__item
                   .relevant-experience__years
-                    span 04/2015 – present
+                    span 11/2017 – present
+                    .relevant-experience__location
+                      small Washington, DC
+                  h4.relevant-experinece__title Independent Consultant
+                  p.relevant-experinece__description Provides web consulting, training, and services to BSA | The Software Alliance and other local businesses while learning full-stack development.
+                .relevant-experience__item
+                  .relevant-experience__years
+                    span 04/2015 – 11/2017
                     .relevant-experience__location
                       small Washington, DC    
                   h3.relevant-experinece__company BSA | The Software Alliance
-                  h4.relevant-experinece__title Web Manager
-                  p.relevant-experinece__description Manages sites for global organization and its new foundation, Software.org. Oversees content management, development, reporting, and migrations. Designs and develops interactive features, themes, emails, surveys, and microsites.
+                  h4.relevant-experinece__title Digital Manager
+                  p.relevant-experinece__description Managed sites for global organization and helped launch its foundation, Software.org. Oversaw content management, development, reporting, and migrations. Designed and developed interactive features, themes, emails, surveys, and microsites.
                 .relevant-experience__item
                   .relevant-experience__years
                     span 11/2014 – 04/2015
@@ -101,20 +107,27 @@ export default {
   data() {
     return {
       skills: [
+        { title: 'Web App Development', level: 70 },
+        { title: 'UI Design | Style Guides', level: 90 },
         { title: 'Web Design | Theming', level: 90 },
         { title: 'Animation | Visualization', level: 80 },
         { title: 'Wireframes | Prototyping', level: 90 },
         { title: 'Documentation | Workflows', level: 90 },
-        { title: 'UI Design | Style Guides', level: 90 },
-        { title: 'Web App Development', level: 70 },
         { title: 'Consulting | Project Management', level: 80 }
       ],
-      showRelevant: true
+      showRelevant: false
     }
   },
   methods: {
     print() {
-      window.print()
+      if (!this.showRelevant) {
+        this.showRelevant = true
+        this.$nextTick(() => {
+          setTimeout(function() {
+            window.print()
+          }, 1000)
+        })
+      }
     }
   }
 }
@@ -266,7 +279,7 @@ article.skills-and-tolls__icons {
   .relevant-experience__item {
     border-left: none;
     padding-left: 0;
-    &:not(:last-child) {
+    &:not(:last-child):not(:nth-last-child(2)) {
       border-bottom: 2px solid #262427;
     }
   }
@@ -327,7 +340,7 @@ article.skills-and-tolls__icons {
     border-left: none;
     padding-left: 0;
   }
-  .relevant-experience__item:not(:last-child) {
+  .relevant-experience__item:not(:last-child):not(:nth-last-child(2)) {
     // border-bottom: 2px solid #262427;
     border-bottom: 2px solid #999;
   }

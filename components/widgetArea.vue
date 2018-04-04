@@ -6,7 +6,7 @@
       section.widget-content
         h3   Phil Gray
         p 
-          em auteur du web
+          em Web Developer
         footer.widget-footer
           p @thephilgray
           .socialFollow
@@ -17,7 +17,11 @@
 </template> 
 <style lang="scss" scoped>
 .wiget-area {
-  background-image: radial-gradient(circle at center, rgba(250, 207, 215, .5), #fff);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(250, 207, 215, 0.5),
+    #fff
+  );
   text-align: center;
 }
 
@@ -26,7 +30,7 @@
 }
 
 .widget-content {
-  background: #C2EAE9;
+  background: #c2eae9;
   width: 100%;
   padding: 1em;
   box-shadow: 0px 1px 6px #262427;
@@ -34,7 +38,7 @@
 
 .avatar {
   border-radius: 50%;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .skills {
@@ -81,7 +85,7 @@ footer {
   }
 }
 
-.socialFollow__icon+.socialFollow__icon {
-  margin-left: .5em;
+.socialFollow__icon + .socialFollow__icon {
+  margin-left: 0.5em;
 }
 </style>
