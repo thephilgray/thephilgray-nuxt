@@ -101,8 +101,8 @@ main
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
-import '~/assets/icons/icons.svg';
-import '~/assets/iconizr-svg-sprite.css';
+import '~/assets/icons/icons.svg'
+import '~/assets/iconizr-svg-sprite.css'
 export default {
   data() {
     return {
@@ -116,23 +116,23 @@ export default {
         { title: 'Consulting | Project Management', level: 80 }
       ],
       showRelevant: false
-    };
+    }
   },
   methods: {
     print() {
       if (!this.showRelevant) {
-        this.showRelevant = true;
+        this.showRelevant = true
         this.$nextTick(() => {
           setTimeout(function() {
-            window.print();
-          }, 1000);
-        });
+            window.print()
+          }, 1000)
+        })
       } else {
-        window.print();
+        window.print()
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -160,7 +160,7 @@ article.skills-and-tolls__icons {
 }
 
 [class^='icon'] {
-  margin: 0.5em;
+  margin: .5em;
 }
 
 .icon-printer {
@@ -186,11 +186,11 @@ article.skills-and-tolls__icons {
 }
 
 .skills-and-tools__skills-item {
-  border: 0.25em solid #262427;
-  padding: 1em 0.25em;
-  margin: 0.5em auto;
+  border: .25em solid #262427;
+  padding: 1em .25em;
+  margin: .5em auto;
   color: #262427;
-  background: #f8efb6;
+  background: #F8EFB6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,14 +209,14 @@ article.skills-and-tolls__icons {
 }
 
 .skills-item__header h3 {
-  margin: 0.5em;
+  margin: .5em;
 }
 
 .skills-item__graphic {
   background: #262427;
   width: 100%;
   height: 2em;
-  border: 0.25em solid #fff;
+  border: .25em solid #fff;
   box-shadow: 1px 2px 4px #262427;
 }
 
@@ -229,25 +229,25 @@ article.skills-and-tolls__icons {
 }
 
 .relevant-experience__years {
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
 
 .relevant-experience__years span {
   background: #262427;
   color: #fff;
   border: 1px solid #262427;
-  padding: 0.25em;
+  padding: .25em;
 }
 
 .relevant-experience__location {
   display: inline;
-  margin-left: 0.5em;
-  border-bottom: 0.25em solid #262427;
+  margin-left: .5em;
+  border-bottom: .25em solid #262427;
 }
 
 .relevant-experience__item {
-  border-left: 0.25em solid #262427;
-  padding-left: 0.5em;
+  border-left: .25em solid #262427;
+  padding-left: .5em;
   margin: 2em 0;
 }
 
@@ -263,7 +263,7 @@ article.skills-and-tolls__icons {
     grid-row: row 2;
     grid-template-columns: 1fr 1fr;
     .relevant-experience__item {
-      margin: 0.5em;
+      margin: .5em;
       &:nth-child(1) {
         grid-column: 1 / 3;
         grid-row: 1;
@@ -347,13 +347,13 @@ article.skills-and-tolls__icons {
     border-bottom: 2px solid #999;
   }
   .relevant-experience__location {
-    border-bottom: 0.25em solid #999;
+    border-bottom: .25em solid #999;
   }
   .skills-and-tools__skills-list {
     font-size: 1em;
     display: inline;
     &:after {
-      content: '';
+      content: "";
       display: table;
       clear: both;
     }
@@ -367,12 +367,13 @@ article.skills-and-tolls__icons {
     padding: 0;
   }
 
-  .skills-and-tools__skills-item + .skills-and-tools__skills-item:before {
+  .skills-and-tools__skills-item+.skills-and-tools__skills-item:before {
     display: inline;
     float: left;
     content: ',\00a0';
   }
   .skills-item__header {
+
     h3 {
       font-size: 1em;
       display: inline;
