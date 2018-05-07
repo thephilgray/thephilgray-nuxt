@@ -1,4 +1,3 @@
-<template lang="md">
 # Phil Gray
 
 ## Overview
@@ -24,26 +23,3 @@ Proficiency with **Git**, debugging, implementing accesibility standards, and wo
 * **Release Management Coordinator (on-site contractor)** at the Department of Labor. _Washington, DC_. 11/14 – 4/15.
 * **Technical Writer (on-site contractor)** at BAE Systems IT. _Herndon, VA_. 4/14 – 11/14.
 * **Web Content Editor, Technical Writer (remote contractor)** for ITPDX. _Portland, Oregon_. 12/10 – 4/14.
-
-</template>
-
-<style lang="scss" scoped>
-@media print {
-  section {
-    font-size: 90%;
-    max-width: 36em;
-    margin: auto;
-  }
-
-  h1:after {
-    content: 'thephilgray@gmail.com';
-    display: block;
-    font-size: 0.5em;
-  }
-}
-
-p + p {
-  text-indent: 0;
-}
-</style>
-
