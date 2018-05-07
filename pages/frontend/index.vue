@@ -13,18 +13,7 @@ main
         img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif")
       .carousel-cell
         img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif")
-      //- .carousel-cell
-      //-   .carousel-cell__content
-      //-     h3 Rapid Prototyping  
-      //- .carousel-cell
-      //-   iframe(height='500', scrolling='no', title='vue-flashcards prototype-3', src='//codepen.io/phillipgray/embed/ZyZJeK/?height=548&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-      //- .carousel-cell
-      //-   .carousel-cell__content
-      //-     h3 Reactive Programming       
-      //- .carousel-cell
-      //-   iframe(height='500', scrolling='no', title='spaceInvaders()', src='//codepen.io/phillipgray/embed/ZJPXwe/?height=566&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
-      //- .carousel-cell
-      //-   iframe(height='500', scrolling='no', title='reactic-tac-no-framework', src='//codepen.io/phillipgray/embed/LjOqQa/?height=383&theme-id=0&default-tab=result&embed-version=2', frameborder='no', allowtransparency='true', allowfullscreen='true', style='width: 100%;')
+
   h2 Responsive designs with modular CSS and JS.
   p Above are examples of some of the sites I've built in production.
 </template>
@@ -48,8 +37,8 @@ iframe {
   height: 200px;
 }
 
-@media screen and ( min-width: 1200px ){
-  .carousel-cell{
+@media screen and (min-width: 1200px) {
+  .carousel-cell {
     height: 500px;
   }
 }
@@ -58,7 +47,6 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .carousel-cell-img {
@@ -66,16 +54,6 @@ iframe {
   height: auto;
   display: block;
 }
-
-// .slide-enter-active,
-// .slide-leave-active {
-//   transition: .5s transform ease-in-out;
-// }
-
-// .slide-enter,
-// .slide-leave-to {
-//   transform: translateX(100vw);
-// }
 </style>
 <script>
 export default {
@@ -87,7 +65,7 @@ export default {
         wrapAround: true,
         autoPlay: true
       }
-    }
+    };
   }
-}
+};
 </script>
