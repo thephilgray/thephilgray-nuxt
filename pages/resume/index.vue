@@ -3,7 +3,7 @@
 
 ## Overview
 
-Self-taught developer with a background in digital marketing and technical writing seeking to transition to a **frontend UI developer role** with opportunities for professional growth in communications and information design, writing, and test-driven development.
+Self-taught developer with a background in digital marketing and technical writing seeking to transition to a **frontend UI developer role** with opportunities for professional growth in communications and information design, writing, and full-stack test-driven development.
 
 ## Skills
 
@@ -30,9 +30,10 @@ Proficiency with **Git**, debugging, implementing accesibility standards, and wo
 <style lang="scss" scoped>
 @media print {
   section {
-    font-size: 90%;
+    font-size: 85%;
     max-width: 36em;
     margin: auto;
+    border-top: 0.75em solid #c2eae9;
   }
 
   h1:after {

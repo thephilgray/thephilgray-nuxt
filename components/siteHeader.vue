@@ -5,13 +5,12 @@ header.site-header
         img(src="~assets/logo.svg")
     nav.scroll
       nuxt-link(to="/" exact) Latest
-      nuxt-link(to="/frontend") Front-end
+      nuxt-link(to="/work") Work
       nuxt-link(to="/resume") Resume
       //- nuxt-link(to="/qa") Q&A
 </template>
 <script>
-export default {
-}
+export default {};
 </script>
 <style scoped>
 .site-header {
@@ -28,7 +27,7 @@ export default {
 }
 
 nav .nuxt-link-active {
-  border-bottom: .75em solid #C2EAE9;
+  border-bottom: 0.75em solid #c2eae9;
   transform: skewX(-10deg);
 }
 
@@ -53,7 +52,7 @@ nav .nuxt-link-active {
   padding: 1em;
 }
 
-.scroll>* {
+.scroll > * {
   flex: 0 0 auto;
   padding: 0 1em;
   font-size: 1.5em;
