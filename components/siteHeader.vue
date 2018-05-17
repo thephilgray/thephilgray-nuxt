@@ -6,6 +6,7 @@ header.site-header
     nav.scroll
       nuxt-link(to="/" exact) Latest
       nuxt-link(to="/work") Work
+      nuxt-link(to="/demos") Demos
       nuxt-link(to="/resume") Resume
       //- nuxt-link(to="/qa") Q&A
 </template>

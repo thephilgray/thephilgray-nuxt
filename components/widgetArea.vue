@@ -6,7 +6,7 @@
       section.widget-content
         h3   Phil Gray
         p 
-          em Web Developer
+          em Web Consultant, Developer, and Content Specialist
         footer.widget-footer
           p @thephilgray
           .socialFollow
@@ -59,7 +59,7 @@ footer {
   width: 100%;
 }
 
-[class ^='icon-'] {
+[class^='icon-'] {
   display: inline-block;
   height: 1em;
   width: 1em;

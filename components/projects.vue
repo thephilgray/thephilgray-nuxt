@@ -1,8 +1,8 @@
 <template lang="md">
-## Professional Work
+## Case Studies
 ### Replacing Excel Workbooks with Quick VueJS Apps
 #### Productivity Apps
-**Challenge:** Replace several unwieldy Excel Workbooks used for managing small data sets and templating with standalone web apps.
+**Challenge:** Replace several unwieldy Excel Workbooks used for templating small datasets with standalone web apps that are faster and more user-friendly for the whole team.
 
 * Develop forms and user interfaces with VueJS templating and Bootstrap
 * Use VueJS data, events, methods, watchers, and computed properties to manage and interact with state
@@ -20,13 +20,13 @@
 * Test, troubleshoot, contribute CSS, and coordinate fixes with developers.
 * Use VisualBuilder and custom CSS to create visually stunning presentations for the report pages
 
-**Lessons Learned:** The meetings kicking off a new website are often time-consuming and unproductive, reducing the amount of time for development and testing. Everyone eventually comes to a consensus but with something different mind. Clickable prototypes are very effective for quickly demoing content flow and features and ensuring that everyone is on the same page. Approaching sites with a content-first strategy can significantly reduce time, costs, and miscommunication.
+**Lessons Learned:** The meetings kicking off a new website are often time-consuming and unproductive, reducing the amount of time for development and testing. Everyone eventually comes to a consensus but with something different in mind. Clickable prototypes are very effective for quickly demoing content flow and features and ensuring that everyone is on the same page. Approaching sites with a content-first strategy can significantly reduce time, costs, and miscommunication.
 
-**Link:** [ https://software.org/](https://software.org/)
+<!-- **Link:** [ https://software.org/](https://software.org/)
 
 **Link:** [ https://software.org/reports/2017-us-software-impact/](https://software.org/reports/2017-us-software-impact/)
 
-**Link:** [ https://software.org/reports/sensor-sensibility/](https://software.org/reports/sensor-sensibility/)
+**Link:** [ https://software.org/reports/sensor-sensibility/](https://software.org/reports/sensor-sensibility/) -->
 
 **Tags:** CSS, Prototypes, Project Management, Content Management, Bootstrap
 
@@ -43,7 +43,7 @@
 
 **Lessons Learned:** When contemplating a redesign, businesses often look first to the theme store. For an existing brand, one-size-fits-all solutions are difficult to tame and often lack support for older browsers. I proposed building a custom theme, and while offered a good learning experience, I soon realized I was reinventing the wheel for a rather conventional blog, and it would make more sense to build a child theme for this project. WordPress's out-of-the-box themes are responsive by default, have great browser support, and no feature bloat. I built a child theme atop of twentysixteen, making use of a lot of the base templates so I could spend more time crafting a fresh, modern look that would attract renewed interest in the content.
 
-**Link:** [ http://techpost.bsa.org/](http://techpost.bsa.org/)
+<!-- **Link:** [ http://techpost.bsa.org/](http://techpost.bsa.org/) -->
 
 **Tags:** SASS, Responsive Design, WordPress, Theming
 
@@ -61,11 +61,11 @@
 
 **Lessons Learned:** I wanted the site designs to imitate the look and feel of the print designs as closely as possible while also being fully responsive. I learned responsive typography techniques to capture the essence of the print design on different screen sizes and when aspects of print design don't translate well onto the screen. Also, I learned the value of CSS class naming and module organization conventions.
 
-**Link:** [ http://encryption.bsa.org/](http://encryption.bsa.org/)
+<!-- **Link:** [ http://encryption.bsa.org/](http://encryption.bsa.org/)
 
 **Link:** [ http://softwareimpact.bsa.org/eu/](http://softwareimpact.bsa.org/eu/)
 
-**Link:** [ http://softwareimpact.bsa.org/](http://softwareimpact.bsa.org/)
+**Link:** [ http://softwareimpact.bsa.org/](http://softwareimpact.bsa.org/) -->
 
 **Tags:** SASS, SMACSS, Responsive Design, jQuery
 
