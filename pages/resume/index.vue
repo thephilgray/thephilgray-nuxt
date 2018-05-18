@@ -3,9 +3,9 @@ main
   header.main-header
     h1.main-header__name Phil Gray
     p.main-header__title
-      strong Front-End Developer
-    no-ssr
-      .icon-printer(@click="print")
+      strong Web Consultant, Front-End Developer
+    //- no-ssr
+    //-   .icon-printer(@click="print")
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -18,9 +18,9 @@ main
               .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
               .skills-item__header
                 h3 {{skill.title}}
-              .skills-item__graphic
-                .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
-                  small {{skill.level}}%
+              //- .skills-item__graphic
+              //-   .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
+              //-     small {{skill.level}}%
         article.skills-and-tolls__tools
           h2 Tools
           p CSS, SASS, HTML5, JavaScript, Pug, VueJS, React, Angular, jQuery, Next, Nuxt, Jekyll, NodeJS, Express, Chai, Mocha, Jest, MongoDB, GraphQL, Apollo, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
@@ -136,6 +136,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  margin: 0;
+}
 .main-header {
   display: flex;
   align-items: flex-end;
@@ -306,6 +309,11 @@ article.skills-and-tolls__icons {
   .skills-item__icon,
   .skills-item__graphic {
     display: none;
+  }
+  h1:after {
+    content: 'thephilgray@gmail.com';
+    display: block;
+    font-size: 0.5em;
   }
   .skills-and-tools__skills-list {
     display: grid;

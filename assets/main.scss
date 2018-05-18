@@ -12,6 +12,11 @@ body {
   font-kerning: normal;
 }
 
+p {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
 p + p {
   text-indent: 1em;
 }
@@ -31,17 +36,18 @@ h1 {
 h2 {
   font-size: 2.074em;
   line-height: 1.4;
+  margin: 0.5em 0;
 }
 
 h3 {
   font-size: 1.728em;
-  margin: 0;
+
   line-height: 1.4;
 }
 
 h4 {
   font-size: 1.44em;
-  margin: 0;
+
   line-height: 1.4;
 }
 
@@ -54,7 +60,6 @@ h6 {
 }
 
 h1 {
-  margin-bottom: 0;
   letter-spacing: 0.1em;
 }
 
