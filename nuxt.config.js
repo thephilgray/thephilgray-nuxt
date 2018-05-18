@@ -26,7 +26,7 @@ module.exports = {
       }
     ]
   },
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/vuetify'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/vuetify', '@nuxtjs/axios'],
   plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
   /*
   ** Customize the progress-bar color
@@ -48,7 +48,6 @@ module.exports = {
           exclude: /(node_modules)/
         });
       }
-    },
-    vendor: ['axios']
+    }
   }
 };

@@ -5,7 +5,7 @@
   "author": "phil.nametheanimal <phil.nametheanimal@gmail.com>",
   "private": true,
   "dependencies": {
-    "@nuxtjs/axios": "^4.3.0",
+    "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/markdownit": "^1.2.1",
     "@nuxtjs/vuetify": "^0.4.2",
     "axios": "^0.16.2",
@@ -16,6 +16,7 @@
     "sass": "^1.0.0-beta.2",
     "sass-loader": "^6.0.6",
     "susy": "^3.0.0",
+    "twitter-text": "^2.0.4",
     "vue-axios": "^2.0.2",
     "vue-flickity": "^1.0.8"
   },
