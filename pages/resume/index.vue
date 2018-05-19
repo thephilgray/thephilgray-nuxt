@@ -4,8 +4,6 @@ main
     h1.main-header__name Phil Gray
     p.main-header__title
       strong Web Consultant, Front-End Developer
-    //- no-ssr
-    //-   .icon-printer(@click="print")
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -117,20 +115,6 @@ export default {
       ],
       showRelevant: false
     };
-  },
-  methods: {
-    print() {
-      if (!this.showRelevant) {
-        this.showRelevant = true;
-        this.$nextTick(() => {
-          setTimeout(function() {
-            window.print();
-          }, 1000);
-        });
-      } else {
-        window.print();
-      }
-    }
   }
 };
 </script>

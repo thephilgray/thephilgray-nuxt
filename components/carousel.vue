@@ -1,28 +1,24 @@
 <template lang="pug">
-main
-  no-ssr
-    .flickityContainer
-      flickity(ref="flickity")
-        .carousel-cell
-          img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif")
-        .carousel-cell
-          img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/encryption.gif")
-        .carousel-cell
-          img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/ckscreen.gif")
-        .carousel-cell
-          img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif")
-        .carousel-cell
-          img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif")
-    projects
+div 
+  .flickityContainer
+    keep-alive
+      no-ssr
+        flickity(ref="flickity")
+          .carousel-cell
+            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif")
+          .carousel-cell
+            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/encryption.gif")
+          .carousel-cell
+            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/ckscreen.gif")
+          .carousel-cell
+            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif")
+          .carousel-cell
+            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif")
 </template>
 
 
 <script>
-import projects from '../../components/projects';
 export default {
-  components: {
-    projects
-  },
   data() {
     return {
       images: [

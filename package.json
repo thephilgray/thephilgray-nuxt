@@ -6,14 +6,15 @@
   "private": true,
   "dependencies": {
     "@nuxtjs/axios": "^4.5.2",
+    "node-sass": "^4.5.3",
     "nuxt": "1.4.0",
     "nuxtent": "^1.4.1",
-    "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.2",
     "sass": "^1.0.0-beta.2",
     "sass-loader": "^6.0.6",
     "susy": "^3.0.0",
-    "twitter-text": "^2.0.4"
+    "twitter-text": "^2.0.4",
+    "vue-flickity": "^1.1.2"
   },
   "scripts": {
     "dev": "nuxt",

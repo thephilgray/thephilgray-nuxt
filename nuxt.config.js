@@ -2,7 +2,10 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  css: [{ src: 'assets/main.scss', lang: 'scss' }],
+  css: [
+    { src: 'assets/main.scss', lang: 'scss' },
+    { src: 'flickity/css/flickity.css', lang: 'css' }
+  ],
   head: {
     title: 'thephilgray',
     meta: [
@@ -27,6 +30,7 @@ module.exports = {
     ]
   },
   modules: ['nuxtent'],
+  plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
   /*
   ** Customize the progress-bar color
   */
