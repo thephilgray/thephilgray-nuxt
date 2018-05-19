@@ -8,7 +8,7 @@ module.exports = {
   api: {
     baseURL:
       process.env.NODE_ENV === 'production'
-        ? 'http://thephilgray.com'
+        ? 'http://www.thephilgray.com'
         : 'http://localhost:3000'
   }
 };
