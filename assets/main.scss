@@ -17,9 +17,9 @@ p {
   line-height: 1.4;
 }
 
-p + p {
-  text-indent: 1em;
-}
+// p + p {
+//   text-indent: 1em;
+// }
 a {
   text-decoration: none;
   color: #35468d;
@@ -41,12 +41,13 @@ h2 {
 
 h3 {
   font-size: 1.728em;
-
+  margin: 0.25em 0;
   line-height: 1.4;
 }
 
 h4 {
   font-size: 1.44em;
+  margin: 0.25em 0;
 
   line-height: 1.4;
 }
@@ -67,10 +68,10 @@ span {
   font-variant-numeric: oldstyle-nums;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
+// ul {
+//   margin: 0;
+//   padding: 0;
+// }
 
 li li {
   margin-right: 1em;

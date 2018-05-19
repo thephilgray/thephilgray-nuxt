@@ -2,7 +2,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  css: ['assets/main.scss', { src: 'flickity/css/flickity.css', lang: 'css' }],
+  css: [{ src: 'assets/main.scss', lang: 'scss' }],
   head: {
     title: 'thephilgray',
     meta: [
@@ -26,15 +26,16 @@ module.exports = {
       }
     ]
   },
-  modules: ['@nuxtjs/markdownit', '@nuxtjs/vuetify', '@nuxtjs/axios'],
-  plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
+  modules: ['nuxtent'],
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#FEBAC5' },
+
   /*
   ** Build configuration
   */
+
   build: {
     /*
     ** Run ESLINT on save
