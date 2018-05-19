@@ -21,6 +21,7 @@ p {
 //   text-indent: 1em;
 // }
 a {
+  word-break: break-all;
   text-decoration: none;
   color: #35468d;
   &:hover {

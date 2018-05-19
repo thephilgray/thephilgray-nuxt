@@ -5,7 +5,7 @@ category: work
 
 ### Planning a New Site for a New Foundation
 
-#### Software.org
+#### Software dot org
 
 **Challenge**: Work with an agency and various stakeholders to realize a new foundation site. Create rich interactive pages and features
 

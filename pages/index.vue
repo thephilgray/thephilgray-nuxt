@@ -4,7 +4,7 @@ main
     p(style={"text-align": "center"}) The latest posts from @thephilgray
   article(v-for="post in latestPosts")
     a(v-if="post.gsx$url.$t", :href="post.gsx$url.$t") {{post.gsx$handle.$t}}
-    blockquote
+    blockquote.tweetText
       .sm-post(v-html="raw(post.gsx$value.$t)") 
     p {{post.gsx$date.$t}}
 </template>
@@ -32,6 +32,10 @@ article {
   text-align: center;
   padding: 0.25em;
   border: 0.25em solid #262427;
+}
+
+.tweetText{
+  word-wrap: break-word;
 }
 
 article + article {
