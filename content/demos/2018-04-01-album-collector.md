@@ -1,13 +1,10 @@
 ---
 title: Album Collector
+lead: Approaches in Full-Stack App Development with React and VueJS
+abstract: Variations on a simple app for posting and sharing reviews of your favorite albums.
 category: demo
+tags: Node, React, VueJS, Redux, Vuex, Storybook, Axios, Styled Components, SASS, SVG, MongoDB, Prisma, GraphQL, FireBase Functions, etc.
 ---
-
-### Approaches in Full-Stack App Development with React and VueJS
-
-#### Album Collector
-
-Variations on a simple app for posting and sharing reviews of your favorite albums.
 
 ##### Inspiration
 
@@ -24,8 +21,6 @@ I started by building simple Redux/Vuex versions with Create React App and Vue-C
 In the meantime, I also worked on a couple different backend solutions, one with Express and Mongo, and the other with Prisma. After building a simple API with Prisma, and enjoying the ease of it, I decided to get some more experience with Express and Mongo and chose that route. I wrote the API in a test-driven way, writing assertion tests with Mocha and then later Jest before writing code.
 
 After building some parts of the application on both the front and back ends, I attempted a full-stack test-driven version. I started by writing a custom Webpack config file and setting up linting and various testing tools and workflows. After the initial setup, I followed an outside-in approach, developing basic features first and then moving down the stack to the server level and then further down to the database, attempting to spend more time coding the former and more time testing the latter.
-
-**Tags**: React, VueJS, Redux, Vuex, Storybook, Axios, Styled Components, SASS, SVG, MongoDB, Prisma, GraphQL, FireBase Functions, etc.
 
 **Link**: [https://github.com/philgrayphilgray/api-design-2018/tree/master/001_express_mongo](https://github.com/philgrayphilgray/api-design-2018/tree/master/001_express_mongo)
 

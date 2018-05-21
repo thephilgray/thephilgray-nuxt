@@ -1,13 +1,10 @@
 ---
 title: Software Studies Microsites
+lead: Transforming Ink Into Pixels
 category: work
+abstract: Create responsive sites from print handouts meant to educate policymakers about the value of encryption and software.
+tags: SASS, SMACSS, Responsive Design, jQuery
 ---
-
-### Transforming Ink Into Pixels
-
-#### Software Studies Microsites
-
-**Challenge**: Create responsive sites from print handouts meant to educate policymakers about the value of encryption and software.
 
 * Extract colors, images, and icons from PDFs and illustrator files
 * Edit and optimize images and icons for the web
@@ -20,5 +17,3 @@ category: work
 ![Economic Impact Microsite](https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif)
 
 **Lessons Learned**: I wanted the site designs to imitate the look and feel of the print designs as closely as possible while also being fully responsive. I learned responsive typography techniques to capture the essence of the print design on different screen sizes and when aspects of print design don't translate well onto the screen. Also, I learned the value of CSS class naming and module organization conventions.
-
-**Tags**: SASS, SMACSS, Responsive Design, jQuery

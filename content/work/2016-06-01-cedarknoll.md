@@ -1,13 +1,10 @@
 ---
 title: Cedar Knoll Restaurant Site
+lead: Making an Entrance
 category: work
+abstract: Create an attractive responsive landing page to help establish a new restaurant's brand and online presence.
+tags: SASS, Gulp, Responsive Design, Copywriting, Digital Marketing, SVG
 ---
-
-### Making an Entrance
-
-#### Cedar Knoll Restaurant Site
-
-**Challenge**: Create an attractive responsive landing page to help establish a new restaurant's brand and online presence.
 
 * Design and develop site using Gulp and SASS
 * Discuss site with business owner and logo designer to establish project requirements and branding guidelines
@@ -23,5 +20,3 @@ Task runners like Gulp, once configured properly, can eliminate a tremendous amo
 I learned a lot about configuring Gulp during the original build phase, but ultimately I migrated to a Gulp starter kit with an optimal set of features for the project.
 
 **Link**: https://github.com/philgrayphilgray/cedarknoll
-
-**Tags**: SASS, Gulp, Responsive Design, Copywriting, Digital Marketing, SVG

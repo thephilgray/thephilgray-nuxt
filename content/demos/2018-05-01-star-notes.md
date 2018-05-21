@@ -1,13 +1,10 @@
 ---
 title: StarNotes
+lead: Building a Realtime App with APIs and User Authentication
+abstract: A KanBan App for Your GitHub Starred Repos
 category: demo
+tags: VueJS, Veux, Vuetify, Axios, Firebase, Github API
 ---
-
-### Building a Realtime App with APIs and User Authentication
-
-#### StarNotes
-
-A KanBan App for Your GitHub Starred Repos
 
 ##### Inspiration
 
@@ -32,7 +29,5 @@ For example, the method I used to check the user's auth status to persist their 
 This was my third project using Vuetify, so there was still much to learn but I became a lot faster at using the API without referring to the docs as much.
 
 I've also worked with Firebase in a few other projects, but I spent a lot of time with the docs and I'm now comfortable with all the common auth and database methods.
-
-**Tags**: VueJS, Veux, Vuetify, Axios, Firebase, Github API
 
 **Link**: [https://github.com/philgrayphilgray/vue-2018/tree/master/004_star-notes](https://github.com/philgrayphilgray/vue-2018/tree/master/004_star-notes)
