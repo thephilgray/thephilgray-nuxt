@@ -1,3 +1,4 @@
+const Prism = require('prismjs');
 module.exports = {
   content: [
     [
@@ -33,5 +34,17 @@ module.exports = {
       process.env.NODE_ENV === 'production'
         ? 'http://www.thephilgray.com'
         : 'http://localhost:3000'
+  },
+  parsers: {
+    md: {
+      extend(config) {
+        config.highlight = (code, lang) => {
+          return `<pre class="language-${lang}"><code class="language-${lang}">${Prism.highlight(
+            code,
+            Prism.languages[lang] || Prism.languages.markup
+          )}</code></pre>`;
+        };
+      }
+    }
   }
 };

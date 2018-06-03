@@ -15,6 +15,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.post__tags {
+  margin: 1em 0;
+}
 .post__tag {
   margin: 0 0.5em;
   border: 1px solid #262427;

@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    BlogPostListing(:posts="posts")
+    BlogPostListing(:posts="posts.length > 1 ? posts : [posts]")
     PaginationControls(:numberOfPages="numberOfPages", :currentPage="Number(1)", relativePath="/blog/")
 </template>
 
@@ -14,24 +14,14 @@ export default {
     PaginationControls
   },
   async asyncData({ app }) {
-    // eslint-disable-next-line
-    console.log('fetching async data');
-
-    const allPages = await app
+    const allPosts = await app
       .$content('/blog')
       .query({ exclude: ['attributes', 'body'] })
       .getAll();
     return {
       posts: await app.$content('/blog').getOnly(0, 4),
-      numberOfPages: Math.ceil(allPages.length / 5)
+      numberOfPages: Math.ceil(allPosts.length / 5)
     };
-  },
-  methods: {
-    tags(post) {
-      // eslint-disable-next-line
-      console.log(post);
-      return post.tags.split(',').map(tag => tag.trim());
-    }
   }
 };
 </script>

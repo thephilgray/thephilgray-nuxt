@@ -15,8 +15,6 @@ export default {
     PaginationControls
   },
   async asyncData({ app }) {
-    // eslint-disable-next-line
-    console.log('fetching async data');
     const { page } = app.context.route.params;
 
     const shiftIndex = currentIndex => (currentIndex += page * 2.5);

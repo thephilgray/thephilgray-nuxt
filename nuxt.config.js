@@ -4,7 +4,8 @@ module.exports = {
   */
   css: [
     { src: 'assets/main.scss', lang: 'scss' },
-    { src: 'flickity/css/flickity.css', lang: 'css' }
+    { src: 'flickity/css/flickity.css', lang: 'css' },
+    { src: 'prismjs/themes/prism-okaidia.css', lang: 'css' }
   ],
   head: {
     title: 'thephilgray',
