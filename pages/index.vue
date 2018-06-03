@@ -34,7 +34,7 @@ article {
   border: 0.25em solid #262427;
 }
 
-.tweetText{
+.tweetText {
   word-wrap: break-word;
 }
 

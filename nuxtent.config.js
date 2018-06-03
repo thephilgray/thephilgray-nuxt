@@ -1,10 +1,33 @@
 module.exports = {
-  content: {
-    page: '/_project',
-    permalink: '/projects/:slug',
-    isPost: false,
-    generate: ['get', 'getAll']
-  },
+  content: [
+    [
+      'work',
+      {
+        page: '/work/_slug',
+        permalink: '/work/:slug',
+        isPost: false,
+        generate: ['get', 'getAll']
+      }
+    ],
+    [
+      'demos',
+      {
+        page: '/demos/_slug',
+        permalink: '/demos/:slug',
+        isPost: false,
+        generate: ['get', 'getAll']
+      }
+    ],
+    [
+      'blog',
+      {
+        page: '/blog/_slug',
+        permalink: '/blog/:year/:month/:day/:slug',
+        isPost: true,
+        generate: ['get', 'getAll']
+      }
+    ]
+  ],
   api: {
     baseURL:
       process.env.NODE_ENV === 'production'

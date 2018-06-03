@@ -1,7 +1,7 @@
 <template lang="pug">
 .demos
     h2 Demos and Personal Projects
-    div(v-for="project in filteredProjects")
+    div(v-for="project in projects")
         h3 {{project.lead}}
         p {{project.abstract}}
         transition(name="slide-fade" mode="in-out")
@@ -16,7 +16,7 @@
 export default {
   async asyncData({ app }) {
     return {
-      projects: await app.$content('/').getAll()
+      projects: await app.$content('/demos').getAll()
     };
   },
   data() {

@@ -1,31 +1,25 @@
 <template lang="pug">
 .projects
     h2 Case Studies
-    carousel
-    div(v-for="project in projects" :key="project.title")
-        h3 {{project.lead}}
-        p {{project.abstract}}
-        transition(name="slide-fade" mode="in-out")
-          nuxtent-body(v-if="active === project.title" :body="project.body")
-        p
-          strong Tags: 
-          | {{project.tags}}        
-        button.btn.btn--full-width(v-if="active !== project.title" @click="active = project.title") More
+    h3 {{project.lead}}
+    p {{project.abstract}}
+    nuxtent-body(v-if="active === project.title" :body="project.body")
+    p
+      strong Tags: 
+      | {{project.tags}}        
+    button.btn.btn--full-width(v-if="active !== project.title" @click="active = project.title") More
 
         hr
 </template>
 <script>
-import carousel from '~/components/carousel';
 export default {
-  async asyncData({ app }) {
-    const projects = await app.$content('/work').getAll();
+  async asyncData({ app, route }) {
+    const project = await app.$content('/work').get(route.path);
     return {
-      projects
+      project
     };
   },
-  components: {
-    carousel
-  },
+
   data() {
     return {
       active: ''
