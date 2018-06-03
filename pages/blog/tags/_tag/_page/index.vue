@@ -1,6 +1,7 @@
 <template lang="pug">
 div
   h2 Tag: {{$route.params.tag}}
+  p Page {{$route.params.page}} of {{numberOfPages}}
   hr
   Blog(:posts="tagPosts", :currentPage="Number($route.params.page || 1)", :relativePath="'/blog/tags/' + $route.params.tag + '/'")
 </template>
@@ -25,7 +26,8 @@ export default {
     );
 
     return {
-      tagPosts
+      tagPosts,
+      numberOfPages: Math.ceil(allDocs.length / 5)
     };
   }
 };

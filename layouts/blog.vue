@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { chunk } from 'lodash';
+import { chunk, sortBy, reverse } from 'lodash';
 
 import BlogPostListing from '@/components/blogPostListing';
 import PaginationControls from '@/components/paginationControls';
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     chunkedPosts() {
-      return chunk(this.posts, 5);
+      return chunk(reverse(sortBy(this.posts, post => post.date)), 5);
     },
     currentPagePosts() {
       return this.chunkedPosts[this.currentPage - 1];
