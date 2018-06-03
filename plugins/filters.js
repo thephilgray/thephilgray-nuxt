@@ -1,4 +1,5 @@
 import Vue from 'vue';
-import { format } from 'date-fns';
+import { dateFilter, slugFilter } from '../lib/filters';
 
-Vue.filter('date', date => format(new Date(date), 'MMMM Do, YYYY'));
+Vue.filter('date', dateFilter);
+Vue.filter('slugify', slugFilter);

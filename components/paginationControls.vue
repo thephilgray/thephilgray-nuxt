@@ -1,12 +1,12 @@
 <template lang="pug">
-div.paginationControls
-    .paginationControls__button
-        nuxt-link(:to="previousPage" v-if="currentPage !== 1") ← Previous 
+div.paginationControls(v-if="numberOfPages > 1")
+    .paginationControls__button(v-if="currentPage !== 1")
+        nuxt-link(:to="previousPage") ← Previous 
     .paginationControls__pages
         span.paginationControls__pageNumber(v-for="page in numberOfPages")
-            nuxt-link(:to="page > 1 ? '/blog/' + page : '/blog'") {{page}}    
-    .paginationControls__button
-        nuxt-link(:to="nextPage" v-if="currentPage < numberOfPages") Next →
+            nuxt-link(:to="page > 1 ? relativePath + page : relativePath") {{page}}    
+    .paginationControls__button(v-if="currentPage < numberOfPages")
+        nuxt-link(:to="nextPage" ) Next →
 </template>
 
 <script>
@@ -19,18 +19,22 @@ export default {
     currentPage: {
       type: Number,
       default: 1
+    },
+    relativePath: {
+      type: String,
+      default: '/blog/'
     }
   },
   computed: {
     previousPage() {
       return this.currentPage > 2
-        ? `/blog/${Number(this.currentPage) - 1}`
-        : '/blog';
+        ? `${this.relativePath}${Number(this.currentPage) - 1}`
+        : this.relativePath;
     },
     nextPage() {
       return this.currentPage < this.numberOfPages
-        ? `/blog/${Number(this.currentPage) + 1}`
-        : '/blog/';
+        ? `${this.relativePath}${Number(this.currentPage) + 1}`
+        : this.relativePath;
     }
   }
 };

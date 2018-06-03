@@ -2,18 +2,16 @@
   div
     p Page {{$route.params.page}} of {{numberOfPages}}
     hr
-    article(v-for="post in posts")
-      nuxt-link(:to="post.permalink")
-        h3 {{post.title}}
-      p.date {{post.date | date}}
-      p {{post.abstract}}
-    PaginationControls(:numberOfPages="numberOfPages", :currentPage="Number($route.params.page)")
+    BlogPostListing(:posts="posts")
+    PaginationControls(:numberOfPages="numberOfPages", :currentPage="Number($route.params.page)", relativePath="/blog/")
 </template>
 
 <script>
+import BlogPostListing from '@/components/blogPostListing';
 import PaginationControls from '@/components/paginationControls';
 export default {
   components: {
+    BlogPostListing,
     PaginationControls
   },
   async asyncData({ app }) {
