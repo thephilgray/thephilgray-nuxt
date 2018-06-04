@@ -36,6 +36,9 @@ article {
 
 .tweetText {
   word-wrap: break-word;
+  a {
+    word-break: break-all;
+  }
 }
 
 article + article {

@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    BlogPostListing(:posts="currentPagePosts")
+    BlogPostListing(:posts="currentPagePosts", listOnly)
     PaginationControls(:numberOfPages="chunkedPosts.length", :currentPage="currentPage", :relativePath="relativePath")
 </template>
 

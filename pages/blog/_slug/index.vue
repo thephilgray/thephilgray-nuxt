@@ -1,16 +1,12 @@
 <template lang="pug">
-  div
-    article
-      h2 {{post.title}}
-      nuxtent-body(:body="post.body")
-    PostTags(:tags="tags")
+  BlogPost(:post="post", featured)
 </template>
 
 <script>
-import PostTags from '@/components/postTags';
+import BlogPost from '@/components/blogPost';
 export default {
   components: {
-    PostTags
+    BlogPost
   },
   async asyncData({ app, route }) {
     // eslint-disable-next-line
