@@ -28,6 +28,10 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 // modular scale
 h1 {
   font-size: 2.488em;
@@ -79,6 +83,8 @@ li li {
   margin-right: 1em;
 }
 
+// custom button classes
+
 .btn {
   padding: 0.5em;
   text-align: center;
@@ -96,6 +102,8 @@ li li {
   width: 100%;
 }
 
+// nuxt page transitions
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;
@@ -104,6 +112,9 @@ li li {
 .page-leave-to {
   opacity: 0;
 }
+
+// base print styles
+
 @media print {
   .site-header,
   .wiget-area,
@@ -112,4 +123,10 @@ li li {
   .icons {
     display: none;
   }
+}
+
+// prismjs - force long code blocks to wrap
+code[class*='language-'],
+pre[class*='language-'] {
+  white-space: pre-wrap !important;
 }
