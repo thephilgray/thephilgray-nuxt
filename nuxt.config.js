@@ -4,7 +4,8 @@ module.exports = {
   */
   css: [
     { src: 'assets/main.scss', lang: 'scss' },
-    { src: 'flickity/css/flickity.css', lang: 'css' }
+    { src: 'flickity/css/flickity.css', lang: 'css' },
+    { src: 'prismjs/themes/prism-okaidia.css', lang: 'css' }
   ],
   head: {
     title: 'thephilgray',
@@ -30,7 +31,11 @@ module.exports = {
     ]
   },
   modules: ['nuxtent'],
-  plugins: [{ src: '~/plugins/vue-flickity', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-flickity', ssr: false },
+    { src: '~/plugins/disqus' },
+    { src: '~/plugins/filters' }
+  ],
   /*
   ** Customize the progress-bar color
   */

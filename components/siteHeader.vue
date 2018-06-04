@@ -5,6 +5,7 @@ header.site-header
         img(src="~assets/logo.svg")
     nav.scroll
       nuxt-link(to="/" exact) Latest
+      nuxt-link(to="/blog") Blog
       nuxt-link(to="/work") Work
       nuxt-link(to="/demos") Demos
       nuxt-link(to="/resume") Resume

@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import siteHeader from '@/components/siteHeader'
-import siteMain from '@/components/siteMain'
-import widgetArea from '@/components/widgetArea'
-import siteFooter from '@/components/siteFooter'
+import siteHeader from '@/components/siteHeader';
+import siteMain from '@/components/siteMain';
+import widgetArea from '@/components/widgetArea';
+import siteFooter from '@/components/siteFooter';
 export default {
   components: {
     siteHeader,
@@ -18,28 +18,28 @@ export default {
     widgetArea,
     siteFooter
   }
-}
+};
 </script>
 
 <style lang="scss">
-.site>* {
-  margin: 0 .25em 1em;
+.site > * {
+  margin: 0 0.25em 1em;
 }
-
 
 /** layout  **/
 
 @media screen and (min-width: 768px) {
-  .site>* {
+  .site > * {
     margin: 0 1em 1em;
   }
 
   .site {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: 'header header' 'sidebar main' 'footer footer';
     grid-template-rows: 150px 3fr 50px;
     max-width: 1200px;
+    min-height: 100vh;
     margin: 0 auto;
     color: #262427;
   }
@@ -57,7 +57,7 @@ export default {
   }
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: 1200px) {
   .site {
     font-size: 120%;
   }
