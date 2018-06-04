@@ -13,12 +13,15 @@
             strong   Read more >>
       nuxtent-body(v-if="featured", :body="post.body")
     PostTags(:tags="tags")
+    //- BlogComments(v-if="featured && $route.path === post.permalink && ")
 </template>
 
 <script>
+// import BlogComments from '@/components/blogComments';
 import PostTags from '@/components/postTags';
 export default {
   components: {
+    // BlogComments,
     PostTags
   },
   props: {
