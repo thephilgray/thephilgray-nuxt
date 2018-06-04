@@ -9,8 +9,6 @@ export default {
     BlogPost
   },
   async asyncData({ app, route }) {
-    // eslint-disable-next-line
-    console.log('fetching async data');
     return {
       post: await app.$content('/blog').get(route.path)
     };

@@ -7,7 +7,7 @@ div
 </template>
 <script>
 import { slugFilter } from '@/lib/filters.js';
-// import BlogPostListing from '@/components/blogPostListing';
+
 import Blog from '@/layouts/blog';
 export default {
   components: {
@@ -16,8 +16,7 @@ export default {
   async asyncData({ app }) {
     const allDocs = await app.$content('/blog').getAll();
     const { tag } = app.context.route.params;
-    // eslint-disable-next-line
-    console.log(`tag: ${tag}`);
+
     const tagPosts = allDocs.filter(doc =>
       doc.tags
         .split(',')
