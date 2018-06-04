@@ -12,7 +12,7 @@
           .socialFollow
             a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
               i.icon-twitter
-            a.socialFollow__icon(href="https://github.com/philgrayphilgray" alt="Follow me on Github")
+            a.socialFollow__icon(href="https://github.com/thephilgray" alt="Follow me on Github")
               i.icon-github
 </template> 
 <style lang="scss" scoped>
