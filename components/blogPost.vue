@@ -2,8 +2,8 @@
   div
     article
       header
-        h2(v-if="$route.path === post.permalink") {{post.title}}
-        nuxt-link(v-else, :to="post.permalink" )
+        h2.post__title(v-if="$route.path === post.permalink") {{post.title}}
+        nuxt-link.post__title(v-else, :to="post.permalink" )
           h2 {{post.title}}
         p.date {{post.date | date}}
       p 
@@ -13,6 +13,7 @@
             strong   Read more >>
       nuxtent-body(v-if="featured", :body="post.body")
     PostTags(:tags="tags")
+    hr
     //- BlogComments(v-if="featured && $route.path === post.permalink && ")
 </template>
 
@@ -49,10 +50,10 @@ export default {
 article header {
   display: flex;
   position: relative;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
 
-  h2 {
+  .post__title {
     flex: 3 0 80%;
   }
   .date {

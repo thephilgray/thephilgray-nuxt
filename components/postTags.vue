@@ -17,9 +17,11 @@ export default {
 <style lang="scss" scoped>
 .post__tags {
   margin: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .post__tag {
-  margin: 0 0.5em;
+  margin: 0.5em;
   border: 1px solid #262427;
   background: #fff;
   a {
