@@ -1,5 +1,5 @@
 <template lang="pug">
-  BlogPost(:post="post", featured)
+  BlogPost(:post="post" featured)
 </template>
 
 <script>

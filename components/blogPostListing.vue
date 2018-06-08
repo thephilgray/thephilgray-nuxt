@@ -1,7 +1,7 @@
 <template lang="pug">
-div
-  .post( v-for="(post, i) in posts" :key="post.permalink")
-      BlogPost(:post="post", :featured="i === 0 && !listOnly")
+.posts
+  template( v-for="(post, i) in posts")
+      BlogPost(:post="post" :key="post.permalink" :featured="i === 0 && !listOnly")
 </template>
 <script>
 import BlogPost from '@/components/blogPost';

@@ -28,7 +28,7 @@ export default {
 
 /** layout  **/
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .site > * {
     margin: 0 1em 1em;
   }

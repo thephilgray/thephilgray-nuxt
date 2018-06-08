@@ -126,7 +126,45 @@ li li {
 }
 
 // prismjs - force long code blocks to wrap
-code[class*='language-'],
+// code[class*='language-'],
+// pre[class*='language-'] {
+//   white-space: pre-wrap !important;
+// }
+// prismjs - force long code blocks to wrap
+// code[class*='language-'],
+// pre[class*='language-'] {
+//   white-space: pre-wrap !important;
+// }
+
+code {
+  background: #f8efb6;
+}
 pre[class*='language-'] {
-  white-space: pre-wrap !important;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding: 1em;
+}
+
+code[class*='language-'] {
+  overflow-x: auto !important;
+}
+
+.posts,
+.post {
+  max-width: 40em;
+  margin: auto !important;
+  .post__body a {
+    font-weight: 600;
+    word-break: break-all;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .posts,
+  .post {
+    max-width: 800px;
+  }
+  pre[class*='language-'] {
+    margin: 0 !important;
+  }
 }

@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .post
     article
       header
         h2.post__title(v-if="$route.path === post.permalink") {{post.title}}
@@ -11,7 +11,7 @@
         span(v-if="!featured")
           nuxt-link(:to="post.permalink")
             strong   Read more >>
-      nuxtent-body(v-if="featured", :body="post.body")
+      nuxtent-body.post__body(v-if="featured", :body="post.body")
     PostTags(:tags="tags")
     hr
     //- BlogComments(v-if="featured && $route.path === post.permalink && ")
