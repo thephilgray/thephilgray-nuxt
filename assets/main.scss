@@ -139,6 +139,12 @@ li li {
 code {
   background: #f8efb6;
 }
+
+.post li code,
+.post p code {
+  word-break: break-all;
+}
+
 pre[class*='language-'] {
   margin-right: -1em;
   margin-left: -1em;
@@ -147,10 +153,7 @@ pre[class*='language-'] {
 
 code[class*='language-'] {
   overflow-x: auto !important;
-}
-
-.post li code {
-  word-break: break-all;
+  word-break: none;
 }
 
 .posts,
