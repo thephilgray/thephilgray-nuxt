@@ -149,6 +149,10 @@ code[class*='language-'] {
   overflow-x: auto !important;
 }
 
+.post li code {
+  word-break: break-all;
+}
+
 .posts,
 .post {
   max-width: 40em;
