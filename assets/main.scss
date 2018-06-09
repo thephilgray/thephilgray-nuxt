@@ -15,7 +15,7 @@ body {
 p,
 li {
   font-size: 1.2em;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 p,
@@ -48,13 +48,13 @@ h1 {
 
 h2 {
   font-size: 2.074em;
-  line-height: 1.4;
-  margin: 0.25em 0;
+  line-height: 1.6;
+  margin: 1em 0;
 }
 
 h3 {
   font-size: 1.728em;
-  margin: 0.25em 0;
+  margin: 1em 0;
   line-height: 1.4;
 }
 
@@ -82,11 +82,6 @@ h1 {
 span {
   font-variant-numeric: oldstyle-nums;
 }
-
-// ul {
-//   margin: 0;
-//   padding: 0;
-// }
 
 // custom button classes
 
@@ -131,15 +126,6 @@ span {
 }
 
 // prismjs - force long code blocks to wrap
-// code[class*='language-'],
-// pre[class*='language-'] {
-//   white-space: pre-wrap !important;
-// }
-// prismjs - force long code blocks to wrap
-// code[class*='language-'],
-// pre[class*='language-'] {
-//   white-space: pre-wrap !important;
-// }
 
 code {
   background: #f8efb6;
@@ -151,8 +137,7 @@ code {
 }
 
 pre[class*='language-'] {
-  margin-right: -1em;
-  margin-left: -1em;
+  margin-right: 3em -2em !important;
   padding: 1em;
 }
 
@@ -164,6 +149,7 @@ code[class*='language-'] {
 .posts,
 .post {
   max-width: 40em;
+  padding: 1em;
   margin: auto !important;
   .post__body a {
     font-weight: 600;
@@ -175,6 +161,7 @@ code[class*='language-'] {
   .posts,
   .post {
     max-width: 800px;
+    padding: 0;
   }
   pre[class*='language-'] {
     margin: 0 !important;

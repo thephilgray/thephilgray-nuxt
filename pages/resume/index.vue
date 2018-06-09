@@ -119,6 +119,119 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+p,
+li {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+p,
+li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+li {
+  text-indent: 0.5em;
+  margin-left: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #35468d;
+  &:hover {
+    color: #da795c;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+// modular scale
+h1 {
+  font-size: 2.488em;
+}
+
+h2 {
+  font-size: 2.074em;
+  line-height: 1.4;
+  margin: 0.25em 0;
+}
+
+h3 {
+  font-size: 1.728em;
+  margin: 0.25em 0;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.44em;
+  margin: 0.25em 0;
+
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: 1.2em;
+  margin: 0.25em 0;
+}
+
+h6 {
+  font-size: 1em;
+  margin: 0.25em 0;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+}
+
+span {
+  font-variant-numeric: oldstyle-nums;
+}
+
+// custom button classes
+
+.btn {
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #262427;
+  background: #fff;
+  transition: all 0.5s;
+  &:hover {
+    background: #262427;
+    color: #fff;
+  }
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+// nuxt page transitions
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+// base print styles
+
+@media print {
+  .site-header,
+  .wiget-area,
+  .site-footer,
+  .icon-printer,
+  .icons {
+    display: none;
+  }
+}
+
 h1 {
   margin: 0;
 }

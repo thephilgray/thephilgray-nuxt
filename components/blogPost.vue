@@ -2,15 +2,16 @@
   .post
     article
       header
-        h2.post__title(v-if="$route.path === post.permalink") {{post.title}}
+        h1.post__title(v-if="$route.path === post.permalink") {{post.title}}
         nuxt-link.post__title(v-else, :to="post.permalink" )
-          h2 {{post.title}}
+          h2.post__title {{post.title}}
         p.date {{post.date | date}}
       p 
         em {{post.abstract}}
         span(v-if="!featured")
           nuxt-link(:to="post.permalink")
             strong   Read more >>
+        hr(v-if="featured")
       nuxtent-body.post__body(v-if="featured", :body="post.body")
     PostTags(:tags="post.tags")
     hr
@@ -49,7 +50,8 @@ article header {
   align-items: center;
 
   .post__title {
-    flex: 3 0 80%;
+    flex: 3 0 75%;
+    margin: 0;
   }
   .date {
     flex: 0 1 auto;
