@@ -3,7 +3,7 @@ div
   h2 Tag: {{$route.params.tag}}
   p Page {{$route.params.page}} of {{numberOfPages}}
   hr
-  Blog(:posts="tagPosts", :currentPage="Number($route.params.page || 1)", :relativePath="'/blog/tags/' + $route.params.tag + '/'")
+  Blog(:posts="tagPosts", :currentPage="Number($route.params.page || 1)", :relativePath="'/tags/' + $route.params.tag + '/'")
 </template>
 <script>
 import { slugFilter } from '@/lib/filters.js';

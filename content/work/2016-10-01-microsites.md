@@ -3,16 +3,17 @@ title: Software Studies Microsites
 lead: Transforming Ink Into Pixels
 category: work
 abstract: Create responsive sites from print handouts meant to educate policymakers about the value of encryption and software.
+image: https://dzwonsemrish7.cloudfront.net/items/053Y2W2Z162n401R3x15/%5Bb1cc2a8f0861d9bb47926d01103af9f4%5D_encryption2.png?v=9ef34461
 tags: SASS, SMACSS, Responsive Design, jQuery
 ---
 
-* Extract colors, images, and icons from PDFs and illustrator files
-* Edit and optimize images and icons for the web
-* Create responsive site templates
-* Write modular, well-organized SASS following the SMACSS methodology and using libraries like Susy and Modular Scale
-* Write minimal, progressive enhancements with jQuery
-* Use external libraries and customize to implement features like a full 50-state interactive SVG map with data
-* Test sites on a variety of browsers and devices and BrowserStack
+- Extract colors, images, and icons from PDFs and illustrator files
+- Edit and optimize images and icons for the web
+- Create responsive site templates
+- Write modular, well-organized SASS following the SMACSS methodology and using libraries like Susy and Modular Scale
+- Write minimal, progressive enhancements with jQuery
+- Use external libraries and customize to implement features like a full 50-state interactive SVG map with data
+- Test sites on a variety of browsers and devices and BrowserStack
 
 ![Economic Impact Microsite](https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif)
 

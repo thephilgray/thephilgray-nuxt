@@ -10,15 +10,7 @@ module.exports = {
         generate: ['get', 'getAll']
       }
     ],
-    [
-      'demos',
-      {
-        page: '/demos/_slug',
-        permalink: '/demos/:slug',
-        isPost: false,
-        generate: ['get', 'getAll']
-      }
-    ],
+
     [
       'blog',
       {

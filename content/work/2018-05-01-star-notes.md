@@ -4,7 +4,7 @@ lead: Building a Realtime App with APIs and User Authentication
 abstract: Kanban app for your GitHub starred repos.
 category: demo
 image: https://dzwonsemrish7.cloudfront.net/items/230Z0x1J1R2202351k2U/Image%202018-06-08%20at%2012.23.34%20PM.png?v=d2a88ea4
-tags: VueJS, Veux, Vuetify, Axios, Firebase, Github API
+tags: VueJS, Vuex, Vuetify, Axios, Firebase, Github API
 ---
 
 ##### Inspiration

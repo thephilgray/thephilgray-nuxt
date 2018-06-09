@@ -5,7 +5,7 @@ v-card.projectsGrid__item(tile)
             v-layout(fill-height row wrap justify-center align-center)
                 h4 {{project.title}}
                 p {{project.abstract}}
-                PostTags(:tags="project.tags")
+                PostTags(:tags="project.tags" abridged :max="6")
 </template>
 <script>
 import PostTags from '@/components/postTags';

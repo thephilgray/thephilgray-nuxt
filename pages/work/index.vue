@@ -1,50 +1,30 @@
 <template lang="pug">
-.projects
-    h2 Case Studies
-    carousel
-    div(v-for="project in projects" :key="project.title")
-        h3 {{project.lead}}
-        p {{project.abstract}}
-        transition(name="slide-fade" mode="in-out")
-          nuxtent-body(v-if="active === project.title" :body="project.body")
-        p
-          strong Tags: 
-          | {{project.tags}}        
-        button.btn.btn--full-width(v-if="active !== project.title" @click="active = project.title") More
-
-        hr
+.demos
+  h2 Work
+  ProjectsGrid(:projects="projects")
+          
 </template>
 <script>
-import carousel from '~/components/carousel';
+import ProjectsGrid from '@/components/ProjectsGrid/ProjectsGrid';
 export default {
-  async asyncData({ app }) {
-    const projects = await app.$content('/work').getAll();
-    return {
-      projects
-    };
-  },
   components: {
-    carousel
+    ProjectsGrid
   },
-  data() {
+  async asyncData({ app }) {
     return {
-      active: ''
+      projects: await app.$content('/work').getAll()
     };
   },
+
   head() {
     return {
-      title: 'Work: Case Studies'
+      title: 'Demos and Personal Projects'
     };
-  },
-  computed: {
-    filteredProjects() {
-      return this.projects.filter(project => project.category === 'work');
-    }
   }
 };
 </script>
 <style lang="scss" >
-.projects img {
+.demos img {
   max-width: 100%;
   height: auto;
 }
