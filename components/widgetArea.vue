@@ -47,10 +47,6 @@
   padding: 0;
 }
 
-footer {
-  // padding: 1em 0;
-}
-
 .socialFollow {
   display: flex;
   justify-content: center;

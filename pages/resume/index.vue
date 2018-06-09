@@ -472,7 +472,6 @@ article.skills-and-tolls__icons {
   .skills-and-tools__skills-list {
     font-size: 1.2em;
     line-height: 1.2;
-    margin-bottom: 0;
     display: inline;
     &:after {
       content: '';
@@ -491,14 +490,14 @@ article.skills-and-tolls__icons {
 
   .skills-and-tools__skills-item + .skills-and-tools__skills-item:before {
     display: inline;
-    float: left;
+
     content: ',\00a0';
   }
   .skills-item__header {
     h3 {
       font-size: 1em;
       display: inline;
-      float: left;
+
       -webkit-margin-before: 0;
       -webkit-margin-after: 0;
       -webkit-margin-start: 0;
