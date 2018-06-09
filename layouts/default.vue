@@ -1,7 +1,8 @@
 <template lang="pug">
 .site
   siteHeader
-  nuxt
+  siteMain
+    nuxt
   widgetArea
   siteFooter
 </template>

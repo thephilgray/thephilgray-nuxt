@@ -21,7 +21,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 .projectsGrid__item {
   margin: 2em 0;
   transition: transform 100ms cubic-bezier(0.17, 0.67, 0.34, 1.54);
