@@ -12,7 +12,7 @@
           nuxt-link(:to="post.permalink")
             strong   Read more >>
       nuxtent-body.post__body(v-if="featured", :body="post.body")
-    PostTags(:tags="tags")
+    PostTags(:tags="post.tags")
     hr
     //- BlogComments(v-if="featured && $route.path === post.permalink && ")
 </template>
@@ -33,11 +33,6 @@ export default {
     featured: {
       type: Boolean,
       default: false
-    }
-  },
-  computed: {
-    tags() {
-      return this.post.tags.split(',').map(tag => tag.trim());
     }
   }
 };

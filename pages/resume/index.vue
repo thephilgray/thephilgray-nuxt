@@ -3,7 +3,7 @@ main
   header.main-header
     h1.main-header__name Phil Gray
     p.main-header__title
-      strong Web Consultant, Front-End Developer
+      strong Web Consultant/Developer
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -48,9 +48,8 @@ main
             p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
           article.eductation-and-certs__education  
             h2 Certifications
-            ul
-              li (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
-              li Comp TIA Security+ Certification (2013 – 2016, inactive)
+            p (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
+            p Comp TIA Security+ Certification (2013 – 2016, inactive)
             article.relevant-experience
               h2 Relevant Experience
               .relevant-experience__list
@@ -123,6 +122,17 @@ export default {
 h1 {
   margin: 0;
 }
+p {
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
+li {
+  margin: 0;
+  text-indent: 0.5em;
+  margin-left: 2em;
+}
+
 .main-header {
   display: flex;
   align-items: flex-end;
@@ -307,6 +317,11 @@ article.skills-and-tolls__icons {
   article.relevant-experience {
     page-break-before: always; //TODO: hack
   }
+
+  .relevant-experinece__description {
+    margin-top: 0;
+  }
+
   .relevant-experience__list {
     display: grid;
     grid-gap: 1em;
@@ -342,7 +357,9 @@ article.skills-and-tolls__icons {
     border-bottom: 0.25em solid #999;
   }
   .skills-and-tools__skills-list {
-    font-size: 1em;
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-bottom: 0;
     display: inline;
     &:after {
       content: '';

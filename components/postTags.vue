@@ -1,14 +1,19 @@
 <template lang="pug">
-    .post__tags
-      span.post__tag(v-for="tag in tags")
-        nuxt-link(:to="'/blog/tags/' + tag | slugify") {{tag}} 
+  .post__tags
+    span.post__tag(v-for="tag in tagsArray")
+      nuxt-link(:to="'/blog/tags/' + tag | slugify") {{tag}}
 </template>
 <script>
 export default {
   props: {
     tags: {
-      type: Array,
-      default: () => []
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    tagsArray() {
+      return this.tags.split(',').map(tag => tag.trim());
     }
   }
 };

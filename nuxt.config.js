@@ -30,12 +30,18 @@ module.exports = {
       }
     ]
   },
-  modules: ['nuxtent'],
+  modules: ['nuxtent', '@nuxtjs/vuetify'],
   plugins: [
     { src: '~/plugins/vue-flickity', ssr: false },
     { src: '~/plugins/disqus' },
-    { src: '~/plugins/filters' }
+    { src: '~/plugins/filters' },
+    { src: '~plugins/vue-masonry' }
   ],
+  vuetify: {
+    // Vuetify options
+    //  theme: { }
+  },
+
   /*
   ** Customize the progress-bar color
   */

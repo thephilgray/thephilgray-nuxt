@@ -1,29 +1,21 @@
 <template lang="pug">
 .demos
-    h2 Demos and Personal Projects
-    div(v-for="project in projects")
-        h3 {{project.lead}}
-        p {{project.abstract}}
-        transition(name="slide-fade" mode="in-out")
-          nuxtent-body(v-if="active === project.title" :body="project.body")
-        p
-          strong Tags: 
-          | {{project.tags}}        
-        button.btn.btn--full-width(v-if="active !== project.title" @click="active = project.title") More
-        hr
+  h2 Demos
+  ProjectsGrid(:projects="projects")
+          
 </template>
 <script>
+import ProjectsGrid from '@/components/ProjectsGrid/ProjectsGrid';
 export default {
+  components: {
+    ProjectsGrid
+  },
   async asyncData({ app }) {
     return {
       projects: await app.$content('/demos').getAll()
     };
   },
-  data() {
-    return {
-      active: ''
-    };
-  },
+
   head() {
     return {
       title: 'Demos and Personal Projects'

@@ -12,14 +12,23 @@ body {
   font-kerning: normal;
 }
 
-p {
+p,
+li {
   font-size: 1.2em;
   line-height: 1.4;
 }
 
-// p + p {
-//   text-indent: 1em;
-// }
+p,
+li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+li {
+  text-indent: 0.5em;
+  margin-left: 2em;
+}
+
 a {
   text-decoration: none;
   color: #35468d;
@@ -78,10 +87,6 @@ span {
 //   margin: 0;
 //   padding: 0;
 // }
-
-li li {
-  margin-right: 1em;
-}
 
 // custom button classes
 
