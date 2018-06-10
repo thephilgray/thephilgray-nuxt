@@ -24,7 +24,8 @@
     "twitter-text": "^2.0.4",
     "vue-disqus": "^3.0.3",
     "vue-flickity": "^1.1.2",
-    "vue-masonry-css": "^1.0.2"
+    "vue-masonry-css": "^1.0.2",
+    "vue-media": "^1.1.1"
   },
   "scripts": {
     "dev": "nuxt",

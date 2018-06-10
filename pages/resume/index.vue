@@ -1,9 +1,12 @@
 <template lang="pug">
-main
+div
   header.main-header
     h1.main-header__name Phil Gray
     p.main-header__title
       strong Web Consultant/Developer
+  Media(:query="{print:true}")
+    p
+      a(href="mailto:thephilgray@gmail.com") thephilgray@gmail.com
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -11,14 +14,21 @@ main
       section.skills-and-tools
         article.skills-and-tools__skills
           h2 Skills
-          .skills-and-tools__skills-list
-            .skills-and-tools__skills-item(v-for="(skill, index) in skills")
-              .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
-              .skills-item__header
-                h3 {{skill.title}}
-              //- .skills-item__graphic
-              //-   .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
-              //-     small {{skill.level}}%
+          Media(:query="{screen:true}")
+            .skills-and-tools__skills-list
+              .skills-and-tools__skills-item(v-for="(skill, index) in skills")
+                .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
+                .skills-item__header
+                  h3 {{skill.title}}
+                //- .skills-item__graphic
+                //-   .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
+                //-     small {{skill.level}}%
+          Media(:query="{print:true}")
+            p
+              span(v-for="(skill, i) in skills")
+                span(v-if="i < skills.length - 1") {{skill.title}},&nbsp;
+                span(v-else) {{skill.title}}
+                
         article.skills-and-tolls__tools
           h2 Tools
           p CSS, SASS, HTML5, JavaScript, Pug, VueJS, React, Angular, jQuery, Next, Nuxt, Jekyll, NodeJS, Express, Chai, Mocha, Jest, MongoDB, GraphQL, Apollo, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
@@ -49,7 +59,8 @@ main
           article.eductation-and-certs__education  
             h2 Certifications
             p (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
-            p Comp TIA Security+ Certification (2013 – 2016, inactive)
+              br
+              | Comp TIA Security+ Certification (2013 – 2016, inactive)
             article.relevant-experience
               h2 Relevant Experience
               .relevant-experience__list
@@ -98,9 +109,13 @@ main
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
+import Media from 'vue-media';
 import '~/assets/icons/icons.svg';
 import '~/assets/iconizr-svg-sprite.css';
 export default {
+  components: {
+    Media
+  },
   data() {
     return {
       skills: [
@@ -417,11 +432,11 @@ article.skills-and-tolls__icons {
   .skills-item__graphic {
     display: none;
   }
-  h1:after {
-    content: 'thephilgray@gmail.com';
-    display: block;
-    font-size: 0.5em;
-  }
+  // h1:after {
+  //   content: 'thephilgray@gmail.com';
+  //   display: block;
+  //   font-size: 0.5em;
+  // }
   .skills-and-tools__skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -489,15 +504,15 @@ article.skills-and-tolls__icons {
   }
 
   .skills-and-tools__skills-item + .skills-and-tools__skills-item:before {
-    display: inline;
-
+    display: inline-block;
+    float: left;
     content: ',\00a0';
   }
   .skills-item__header {
     h3 {
       font-size: 1em;
-      display: inline;
-
+      display: inline-block;
+      float: left;
       -webkit-margin-before: 0;
       -webkit-margin-after: 0;
       -webkit-margin-start: 0;
