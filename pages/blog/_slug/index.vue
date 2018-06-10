@@ -17,6 +17,11 @@ export default {
     tags() {
       return this.post.tags.split(',').map(tag => tag.trim());
     }
+  },
+  head() {
+    return {
+      title: this.post.title
+    };
   }
 };
 </script>

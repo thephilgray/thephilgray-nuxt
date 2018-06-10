@@ -129,6 +129,11 @@ export default {
       ],
       showRelevant: false
     };
+  },
+  head() {
+    return {
+      title: 'Resume'
+    };
   }
 };
 </script>

@@ -2,10 +2,10 @@ const Prism = require('prismjs');
 module.exports = {
   content: [
     [
-      'work',
+      'projects',
       {
-        page: '/work/_slug',
-        permalink: '/work/:slug',
+        page: '/projects/_slug',
+        permalink: '/projects/:slug',
         isPost: false,
         generate: ['get', 'getAll']
       }

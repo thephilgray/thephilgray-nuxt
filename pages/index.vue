@@ -21,6 +21,12 @@ export default {
     return { latestPosts };
   },
 
+  head() {
+    return {
+      title: 'The Latest'
+    };
+  },
+
   methods: {
     raw(text) {
       return `<h3>${twitter.autoLink(text)}</h3>`;

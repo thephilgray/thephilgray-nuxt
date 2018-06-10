@@ -22,6 +22,12 @@ export default {
       posts: await app.$content('/blog').getOnly(0, 4),
       numberOfPages: Math.ceil(allPosts.length / 5)
     };
+  },
+
+  head() {
+    return {
+      title: 'Blog'
+    };
   }
 };
 </script>

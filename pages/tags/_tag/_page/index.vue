@@ -13,9 +13,9 @@ export default {
   components: {
     Blog
   },
-  async asyncData({ app }) {
+  async asyncData({ app, redirect }) {
     const allDocs = await app.$content('/blog').getAll();
-    const { tag } = app.context.route.params;
+    const { tag, page } = app.context.route.params;
 
     const tagPosts = allDocs.filter(doc =>
       doc.tags
@@ -23,10 +23,16 @@ export default {
         .map(tag => slugFilter(tag))
         .includes(tag)
     );
+    const numberOfPages = Math.ceil(allDocs.length / 5);
+
+    // redirect to the tag page if user attempts to navigate to a page that does not exist
+    if (page > numberOfPages) {
+      redirect('/tags/' + tag);
+    }
 
     return {
       tagPosts,
-      numberOfPages: Math.ceil(allDocs.length / 5)
+      numberOfPages
     };
   }
 };

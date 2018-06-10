@@ -1,6 +1,6 @@
 <template lang="pug">
 .demos
-  h2 Work
+  h2 Work, Demos, and Personal Projects
   ProjectsGrid(:projects="projects")
           
 </template>
@@ -12,7 +12,7 @@ export default {
   },
   async asyncData({ app }) {
     return {
-      projects: await app.$content('/work').getAll()
+      projects: await app.$content('/projects').getAll()
     };
   },
 

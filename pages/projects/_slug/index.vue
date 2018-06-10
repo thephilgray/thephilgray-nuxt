@@ -25,7 +25,12 @@ export default {
   async asyncData({ app, route }) {
     // query the content api for the post at the current route path
     return {
-      post: await app.$content('/work').get(route.path)
+      post: await app.$content('/projects').get(route.path)
+    };
+  },
+  head() {
+    return {
+      title: 'Projects: ' + this.post.title
     };
   }
 };
