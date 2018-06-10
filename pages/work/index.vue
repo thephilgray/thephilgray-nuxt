@@ -18,7 +18,7 @@ export default {
 
   head() {
     return {
-      title: 'Demos and Personal Projects'
+      title: 'Work, Demos, and Personal Projects'
     };
   }
 };

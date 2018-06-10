@@ -15,6 +15,6 @@ tags: SASS, SMACSS, Responsive Design, jQuery
 - Use external libraries and customize to implement features like a full 50-state interactive SVG map with data
 - Test sites on a variety of browsers and devices and BrowserStack
 
-![Economic Impact Microsite](https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif)
+@[micrositesCarousel]()
 
 **Lessons Learned**: I wanted the site designs to imitate the look and feel of the print designs as closely as possible while also being fully responsive. I learned responsive typography techniques to capture the essence of the print design on different screen sizes and when aspects of print design don't translate well onto the screen. Also, I learned the value of CSS class naming and module organization conventions.

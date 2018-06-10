@@ -33,7 +33,7 @@ module.exports = {
   modules: ['nuxtent', '@nuxtjs/vuetify'],
   plugins: [
     { src: '~/plugins/vue-flickity', ssr: false },
-    { src: '~/plugins/disqus' },
+    // { src: '~/plugins/disqus' },
     { src: '~/plugins/filters' },
     { src: '~plugins/vue-masonry' }
   ],

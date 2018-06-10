@@ -14,6 +14,7 @@
               h2 {{post.title}}
               h3 {{post.abstract}}
       nuxtent-body.post(:body="post.body")
+      hr
       PostTags(:tags="post.tags")
 </template>
 

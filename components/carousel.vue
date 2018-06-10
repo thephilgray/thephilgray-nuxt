@@ -4,31 +4,20 @@ div
     keep-alive
       no-ssr
         flickity(ref="flickity")
-          .carousel-cell
-            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif")
-          .carousel-cell
-            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/encryption.gif")
-          .carousel-cell
-            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/ckscreen.gif")
-          .carousel-cell
-            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif")
-          .carousel-cell
-            img.carousel-cell-img(src="https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif")
+          .carousel-cell(v-for="image in images")
+            img.carousel-cell-img(:src="image")
 </template>
 
 
 <script>
 export default {
-  data() {
-    return {
-      images: [
-        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif',
-        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/encryption.gif',
-        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/ckscreen.gif',
-        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/tp.gif',
-        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eiu.gif'
+  props: {
+    images: {
+      type: Array,
+      default: () => [
+        'https://d3sezit9y3vl9o.cloudfront.net/thepg/screens/eueiu_screen3.gif'
       ]
-    };
+    }
   }
 };
 </script>
