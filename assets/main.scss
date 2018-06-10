@@ -133,12 +133,13 @@ code {
 
 .post li code,
 .post p code {
+  overflow-wrap: break-word;
   word-break: break-all;
 }
 
 pre[class*='language-'] {
-  margin: 3em -3em !important;
-  padding: 0.5em;
+  margin: 3em -2em !important;
+  padding: 1em;
 }
 
 code[class*='language-'] {
@@ -152,7 +153,10 @@ code[class*='language-'] {
   margin: auto !important;
   .post__body a {
     font-weight: 600;
-    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    hyphens: auto;
   }
 }
 
