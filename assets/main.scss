@@ -14,7 +14,7 @@ body {
 
 p,
 li {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
@@ -25,8 +25,7 @@ li {
 }
 
 li {
-  text-indent: 0.5em;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 a {
@@ -129,6 +128,7 @@ span {
 
 code {
   background: #f8efb6;
+  vertical-align: 1px;
 }
 
 .post li code,
@@ -137,13 +137,12 @@ code {
 }
 
 pre[class*='language-'] {
-  margin-right: 3em -2em !important;
-  padding: 1em;
+  margin: 3em -3em !important;
+  padding: 0.5em;
 }
 
 code[class*='language-'] {
   overflow-x: auto !important;
-  word-break: none;
 }
 
 .posts,
