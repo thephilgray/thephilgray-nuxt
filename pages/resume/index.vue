@@ -2,11 +2,15 @@
 div
   header.main-header
     h1.main-header__name Phil Gray
-    p.main-header__title
-      strong Web Consultant/Developer
-  Media(:query="{print:true}")
-    p
-      a(href="mailto:thephilgray@gmail.com") thephilgray@gmail.com
+    Media(:query="{print:true}")
+      p.main-header__title
+        strong Web Consultant / Developer
+        br
+        |
+        a(href="http://thephilgray.com") thephilgray.com
+        br
+        |
+        a(href="mailto:thephilgray@gmail.com") thephilgray@gmail.com
   section.main-section
     article.main-section__overview
       h2 Overview
@@ -25,13 +29,13 @@ div
                 //-     small {{skill.level}}%
           Media(:query="{print:true}")
             p
-              span(v-for="(skill, i) in skills")
-                span(v-if="i < skills.length - 1") {{skill.title}},&nbsp;
-                span(v-else) {{skill.title}}
+              span(v-for="(skill, i) in allSkills")
+                span(v-if="i < allSkills.length - 1") {{skill}}, 
+                span(v-else) {{skill}}
                 
         article.skills-and-tolls__tools
           h2 Tools
-          p CSS, SASS, HTML5, JavaScript, Pug, VueJS, React, Angular, jQuery, Next, Nuxt, Jekyll, NodeJS, Express, Chai, Mocha, Jest, MongoDB, GraphQL, Apollo, Git, Gulp, Webpack, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Wordpress
+          p CSS, SASS, HTML5, Pug, JavaScript, NodeJS, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Vuetify, Material-UI, Express, VueJS, React, jQuery, Next, Nuxt, Jekyll, Chai, Mocha, Jest, Git, Gulp, Webpack, MongoDB, Firebase, GraphQL, Redux, Apollo
           .icons
             .icon-css.icon-css-dims
             .icon-sass.icon-sass-dims
@@ -124,8 +128,24 @@ export default {
         { title: 'Wireframes | Prototyping', level: 90 },
         { title: 'Documentation | Workflows', level: 90 },
         { title: 'UI Design | Style Guides', level: 90 },
-        { title: 'Web App Development', level: 70 },
+        { title: 'Web App Development | Testing', level: 70 },
         { title: 'Consulting | Project Management', level: 80 }
+      ],
+      allSkills: [
+        'Web Design',
+        'Theming',
+        'Animation',
+        'Visualization',
+        'Wireframes',
+        'Prototyping',
+        'Documentation',
+        'Workflows',
+        'UI Design',
+        'Style Guides',
+        'Web App Development',
+        'Testing',
+        'Consulting',
+        'Project Management'
       ],
       showRelevant: false
     };
@@ -208,6 +228,13 @@ h1 {
 
 span {
   font-variant-numeric: oldstyle-nums;
+}
+p span {
+  word-wrap: auto;
+}
+
+.main-header__title {
+  text-align: right;
 }
 
 // custom button classes
