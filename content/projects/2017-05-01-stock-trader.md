@@ -1,7 +1,7 @@
 ---
 title: Stock Trader App
 abstract: Learning VueJS.
-category: demo
+category: personal
 tags: VueJS, Vuex, Bootstrap
 ---
 

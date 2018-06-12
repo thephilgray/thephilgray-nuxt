@@ -1,7 +1,7 @@
 <template lang="pug">
 v-card.projectsGrid__item(tile)
     v-card-media(height="400px" :src="project.image")
-        nuxt-link.projectsGrid__cardImageOverlay(:to="project.permalink" tag="v-container" fill-height fluid)
+        nuxt-link.projectsGrid__cardImageOverlay(:class="'--' + color" :to="project.permalink" tag="v-container" fill-height fluid)
             v-layout(fill-height row wrap justify-center align-center)
                 h4 {{project.title}}
                 p {{project.abstract}}
@@ -17,6 +17,10 @@ export default {
     project: {
       type: Object,
       default: () => {}
+    },
+    color: {
+      type: String,
+      default: 'blue'
     }
   }
 };
@@ -53,6 +57,21 @@ export default {
     rgba(255, 255, 255, 0.9) 0%,
     rgba(194, 234, 233, 1) 100%
   );
+
+  &.--orange {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      #da795c 100%
+    );
+  }
+  &.--pink {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      #facfd7 100%
+    );
+  }
 
   background-attachment: scroll;
   background-position: left top;
