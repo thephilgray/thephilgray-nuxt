@@ -14,7 +14,7 @@ body {
 
 p,
 li {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 
@@ -60,7 +60,6 @@ h3 {
 h4 {
   font-size: 1.44em;
   margin: 0.25em 0;
-
   line-height: 1.4;
 }
 
@@ -83,7 +82,6 @@ span {
 }
 
 // custom button classes
-
 .btn {
   text-align: center;
   vertical-align: middle;
@@ -96,18 +94,17 @@ span {
 }
 
 // nuxt page transitions
-
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;
 }
+
 .page-enter,
 .page-leave-to {
   opacity: 0;
 }
 
 // base print styles
-
 @media print {
   .site-header,
   .wiget-area,
@@ -119,7 +116,6 @@ span {
 }
 
 // prismjs - force long code blocks to wrap
-
 code {
   background: #f8efb6;
   vertical-align: 1px;
@@ -132,7 +128,7 @@ code {
 }
 
 pre[class*='language-'] {
-  margin: 3em -2em !important;
+  margin: 4em -2em !important;
   padding: 1em;
 }
 
@@ -142,14 +138,13 @@ code[class*='language-'] {
 
 .posts,
 .post {
-  max-width: 40em;
+  max-width: 50em;
   padding: 1em;
   margin: auto !important;
   .post__body a {
     font-weight: 600;
     overflow-wrap: break-word;
     word-wrap: break-word;
-
     hyphens: auto;
   }
 }
@@ -161,6 +156,6 @@ code[class*='language-'] {
     padding: 0;
   }
   pre[class*='language-'] {
-    margin: 0 !important;
+    margin: 3em 0 !important;
   }
 }
