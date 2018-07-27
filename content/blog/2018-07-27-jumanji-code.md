@@ -1,12 +1,15 @@
 ---
 title: Jumanji Code
-tags: JavaScript, Coding, General, Programming, Bugs
-abstract: Jumanji code creeps out of your machine, follows you home, and keeps you up at night.
+tags: 'JavaScript, Coding, General, Programming, Bugs'
+abstract: >-
+  Jumanji code creeps out of your machine, follows you home, and keeps you up at
+  night.
+published: true
 ---
 
 Jumanji code creeps out of your machine, follows you home, and keeps you up at night. 
 
-You give up and close your laptop, thinking you're done for the day. But as you approach the door, you hear a rattling sound coming from your desk behind you. You turn your head. Nothing. It's just your laptop, cold and still. You exit and unbeknownst to you, all the evil spirits of type errors and exceeded maximum call stacks you actually allowed to be executed on your faithful, excellently crafted machine and dev tools nest into your shadow and cling to your scalp, burrowing deep into your skull. And as the night wears on, the jungle grows around you and envelopes your environs, and the monsters come out in the code of hypnagogic code.
+You give up and close your laptop, thinking you're done for the day. But as you approach the door, you hear a rattling sound coming from your desk behind you. You turn your head. Nothing. It's just your laptop, cold and still. You exit and unbeknownst to you, all the evil spirits of type errors and exceeded maximum call stacks you actually allowed to be executed on your faithful, excellently crafted machine and dev tools nest into your shadow and cling to your scalp, burrowing deep into your skull. And as the night wears on, the jungle grows around you and envelopes your environs, and the monsters come out in hypnagogic code.
 
 You see familiar code morphing into unintelligible characters. You see a figure walking down the hallway and when it gets through the doorway, it disappears and reappears exactly where it started. This happens again and again. And there's nothing you can do to stop it, even though you know you should. But there's no keyboard in front of you, no <kbd>CTRL</kbd> + <kbd>C</kbd>. 
 
