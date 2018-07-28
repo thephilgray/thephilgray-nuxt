@@ -15,6 +15,6 @@ You see familiar code morphing into unintelligible characters. You see a figure 
 
 You see the familiar Google search input before you. Someone is typing into it. The results come back. They click through the first few results. There's a NPM package on GitHub. You're reading through the documentation. It's exactly what you were looking for. It inexplicably solves all your problems. You open your eyes and reach for your phone. You type in the same query. It's not there. Not quite. You begin reading through the results. Yes! That's it. No....no....nevermind. You close your eyes. Now you're searching for an error message that doesn't exist anywhere in Stack Overflow or GitHub issues. You're completely on your own. You don't even know what to do.
 
-Jumanji code persists. You caused the universe to shift off its access and there's something that you need to do to make it right, but you have no clue what it is.
+Jumanji code persists. You caused the universe to shift off its axis and there's something that you need to do to make it right, but you have no clue what it is.
 
-You begin to catalog the bugs. Every time, you see an error in your terminal or console, you write down its name. You draw the monster with its bulging insect eyes and many legs in thick black marker. You pin it to your bug collection like a trophy. You move on.
+You begin to catalog the bugs. Every time you see an error in your terminal or console, you write down its name. You draw the monster with its bulging insect eyes and many legs in thick black marker. You pin it to your bug collection like a trophy. You move on.
