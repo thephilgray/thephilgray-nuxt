@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   /*
   ** Headers of the page
   */
@@ -56,7 +56,7 @@ module.exports = {
     ** Run ESLINT on save
     */
     extend(config, ctx) {
-      if (ctx.isClient) {
+      if (ctx.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
