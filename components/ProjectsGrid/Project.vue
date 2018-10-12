@@ -1,6 +1,6 @@
 <template lang="pug">
 v-card.projectsGrid__item(tile)
-    v-card-media(height="400px" :src="project.image")
+    v-img(height="400px" :src="project.image")
         nuxt-link.projectsGrid__cardImageOverlay(:class="'--' + color" :to="project.permalink" tag="v-container" fill-height fluid)
             v-layout(fill-height row wrap justify-center align-center)
                 h4 {{project.title}}
