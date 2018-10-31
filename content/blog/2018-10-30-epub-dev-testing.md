@@ -13,20 +13,35 @@ Many of the challenges of developing EPUBs have already been solved for the web.
 
 There are literally thousands of solutions when it comes to developing for the web. But I haven't found that's the case for EPUBs. Like websites and web apps, EPUBs need to be tested on a variety of devices. However, unlike these other mediums, EPUBs are not designed for the browser. While the browsers have responded to the hoards of angry developers to fall in line, e-book readers applications have not faced the same level of pressure from the relatively small digital publishing community, and are expected only to meet a minimal set of front-end standards set forth by the IDPF. From my experience so far, support for newer CSS and JS features ranges from the browser equivelents of IE8 to the latest version of Chrome. And while it's somewhat easy to install and test a website in different browser versions on almost any device or in a virtual machine, there are not always desktop versions of e-book reader apps, or they're so different when compared with their mobile app counterparts that it's never safe to assume that if the desktop app supports something, it will also be supported by the mobile app of the same name.
 
-There are many cloud services for testing websites in different browsers on different devices. As far as I know, there's no way to test an EPUB with any of these services, as you would need to launch the EPUB in an e-book reader app, not a browser window. There's nothing like Puppateer or Selenium or Cypress for e-book reader apps. So, beyond building the EPUB and then manually loading and testing, our options are very limited. 
+We find ourselves in the same situation that web developers were in 5 years ago, with a rich set of front-end features, but no way to implement them any confidence without extensive device testing. There are many cloud services for testing websites in different browsers on different devices. As far as I know, there's no way to test an EPUB with any of these services, as you would need to launch the EPUB in an e-book reader app, not a browser window. There's nothing like Puppateer or Selenium or Cypress for e-book reader apps. So, beyond building the EPUB and then manually loading and testing, our options are very limited. This is what I've found so far....
 
-We find ourselves in the same situation that web developers were in 5 years ago, with a rich set of front-end features, but no way to safely and confidently implement them.
+#### In the Browser
 
-This is what I've found so far....
+There seem to be two segments of the EPUB community that are focused on getting EPUBs to work in the browser. One segment is approaching it as a means of bringing "design once, deploy everywhere" to publishing, the idea being that what if your e-book was your source of truth and everything else, including the print book, was just a rendition of that. The other approach embraces the web as a platform, or a cloud provider, that not only hosts the e-books on behalf of users but also allows them to take advantage of features only possible on the web, like synchronizing public and private annotations. This latter group is best represented by [Readium Foundation](https://readium.org/).
 
-#### Readium Viewer
+We can use [ReadiumJS Viewer](https://github.com/readium/readium-js-viewer) to load EPUBs in the browser, making it possible to use existing dev server tools.
 
-There seem to be two segments of the EPUB community that are focused on getting EPUBs to work in the browser. One segment is approaching it as a means of bringing "design once, deploy everywhere" to publishing, the idea being that what if your e-book was your source of truth and everything else, including the print book, was just a rendition of that. The other approach embraces the web as a platform for reading and interacting with the text in ways that are familiar to users of social media. This latter segment is best
+Download the [Readium Cloud Reader Lite](https://github.com/readium/readium-js-viewer/releases) and add it to your develepment workflow. Build your EPUB in its own directory within the `epub_content` directory. It does not need to be compressed or have the `.epub` extension. Configure your dev server tool to launch `index.html?epub=epub_content/` + the name of the EPUB directory on localhost.
 
+One of the nicest things about developing your EPUB with a reader in the browser is that you have full access to your browser's dev tools for inspecting and debugging.
 
-#### iOS
+TODO: Try running Readium Cloud Reader Lite with an automated testing tool that runs in the browser like Cypress.
 
-If you're developing 
+#### MacOS/iOS
 
+If you're developing EPUBs on MacOS, you have access to Apple's Books app. This is a great tool for development because Books exposes has two awesome features for savy users: the [Book Proofing Tool](https://help.apple.com/itc/booksassetguide/#/itc073460726) and [Safari Web Inspector](https://help.apple.com/itc/booksassetguide/#/itc5905301b7). Follow the instructions in the previous links to the Apple Books Asset Guide. 
+
+You can use this tool in combination with a dev server, as well as with Readium Cloud Reader. From my experience so far, it can be a bit laggy and crashes from time to time, but you get access to the web inspector of an actual e-book reader that comes pre-installed on many user devices. Furthermore, if you have an iPad or iPhone connected, you can sync the proof with the device, updating each time you update the code. Again, the synching can be a bit laggy when the e-book is being hosted by a dev server at the end of a complex build workflow, but it's really convenient compared with the alternative of manually loading the compressed, validated EPUB file into iTunes each time you make a change.
+
+To proof a book, you don't need to compress the EPUB but you do need the `.epub` extension. So, I like to add the extension to the name of my dev build directory inside of `epub_content`.
+
+Since there is nothing like a detached version of Apple Books for testing, I'm not sure how you could develop an automated testing suite for MacOS/iOS.
 
 #### Android
+
+For me, Android has been the most elusive target. Though the OS is open source and has more potential for testing, the devices themselves are manufactured by many different vendors and there's nothing like an agreed-upon e-book reader app that comes pre-installed on every Android device. Furthermore, the devices greatly vary in terms of aspect ratio and OS version.
+
+One approach I've been thinking about for a while is to use Android Studio to load the EPUB on different device emulators. If you attempt this, the first thing you'll discover is that the Play Store is not available on any of the emulators. So, there's no e-book reader application, and no way to install one, unless you have the source code. However, there is a one workaround. You can sideload [Open GApps](https://opengapps.org/) on the emulator. This can be kind of tricky if you don't have much experience working with Android Studio, but the tutorial, [Installing Google Play Services on an Android Studio emulator](https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1) got me through it (read the comments, though).
+
+TODO: Reasearch automated testing tools to use with Android Studio.
+
