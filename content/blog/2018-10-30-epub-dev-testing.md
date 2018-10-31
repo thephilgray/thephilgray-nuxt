@@ -13,7 +13,11 @@ Many of the challenges of developing EPUBs have already been solved for the web.
 
 There are literally thousands of solutions when it comes to developing for the web. But I haven't found that's the case for EPUBs. Like websites and web apps, EPUBs need to be tested on a variety of devices. However, unlike these other mediums, EPUBs are not designed for the browser. While the browsers have responded to the hoards of angry developers to fall in line, e-book readers applications have not faced the same level of pressure from the relatively small digital publishing community, and are expected only to meet a minimal set of front-end standards set forth by the IDPF. From my experience so far, support for newer CSS and JS features ranges from the browser equivelents of IE8 to the latest version of Chrome. And while it's somewhat easy to install and test a website in different browser versions on almost any device or in a virtual machine, there are not always desktop versions of e-book reader apps, or they're so different when compared with their mobile app counterparts that it's never safe to assume that if the desktop app supports something, it will also be supported by the mobile app of the same name.
 
-There are many cloud services for testing websites in different browsers on different devices. As far as I know, there's no way to test an EPUB with any of these services, as you would need to launch the EPUB in an e-book reader app, not a browser window. There's nothing like Puppateer or Selenium or Cypress for e-book reader apps. So, beyond building the EPUB and then manually loading and testing, our options are very limited. This is what I've found so far....
+There are many cloud services for testing websites in different browsers on different devices. As far as I know, there's no way to test an EPUB with any of these services, as you would need to launch the EPUB in an e-book reader app, not a browser window. There's nothing like Puppateer or Selenium or Cypress for e-book reader apps. So, beyond building the EPUB and then manually loading and testing, our options are very limited. 
+
+We find ourselves in the same situation that web developers were in 5 years ago, with a rich set of front-end features, but no way to safely and confidently implement them.
+
+This is what I've found so far....
 
 #### Readium Viewer
 
