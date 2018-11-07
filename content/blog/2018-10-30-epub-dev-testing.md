@@ -27,6 +27,8 @@ One of the nicest things about developing your EPUB with a reader in the browser
 
 TODO: Try running Readium Cloud Reader Lite with an automated testing tool that runs in the browser like Cypress.
 
+See: [Using the CloudReader to Test EPUB Publications](https://readium.org/technical/technical-notes/_posts/testing-with-cloudreader/).
+
 #### MacOS/iOS
 
 If you're developing EPUBs on MacOS, you have access to Apple's Books app. This is a great tool for development because Books exposes has two awesome features for savy users: the [Book Proofing Tool](https://help.apple.com/itc/booksassetguide/#/itc073460726) and [Safari Web Inspector](https://help.apple.com/itc/booksassetguide/#/itc5905301b7). Follow the instructions in the previous links to the Apple Books Asset Guide. 
@@ -42,6 +44,44 @@ Since there is nothing like a detached version of Apple Books for testing, I'm n
 For me, Android has been the most elusive target. Though the OS is open source and has more potential for testing, the devices themselves are manufactured by many different vendors and there's nothing like an agreed-upon e-book reader app that comes pre-installed on every Android device. Furthermore, the devices greatly vary in terms of aspect ratio and OS version.
 
 One approach I've been thinking about for a while is to use Android Studio to load the EPUB on different device emulators. If you attempt this, the first thing you'll discover is that the Play Store is not available on any of the emulators. So, there's no e-book reader application, and no way to install one, unless you have the source code. However, there is a one workaround. You can sideload [Open GApps](https://opengapps.org/) on the emulator. This can be kind of tricky if you don't have much experience working with Android Studio, but the tutorial, [Installing Google Play Services on an Android Studio emulator](https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1) got me through it (read the comments, though).
+
+##### Notes
+- Install Android Studio
+- Download GApps and extract packages (again, see: [Installing Google Play Services on an Android Studio emulator](https://medium.com/@dai_shi/installing-google-play-services-on-an-android-studio-emulator-fffceb2c28a1))
+- (Note: this step is not required but included for consistency with steps below) Add `$ANDROID_HOME` as an environmental variable. Also add `emulator` and `tools` to the path. If you get a missing emulator engine error message, just make sure to add `emulator` first, before `tools`. I’m not sure why.
+
+- Create a new emulator <emulator-name> in Android Studio or use CLI command
+
+- Start emulator in writable mode (may need to wipe user data if emulator was created previously and is not booting)
+```bash
+emulator @<emulator-name> -writable-system &
+```
+- Run as root and remount in writable mode
+```bash
+adb root
+adb remount -writable-system
+```
+- Install GApps (from the directory where you extracted the packages)
+```bash
+adb push etc /system
+adb push framework /system
+adb push app /system
+adb push priv-app /system
+```
+
+- Restart
+```bash
+adb shell stop
+adb shell start
+```
+- Login to Google through the emulator
+- Install the Adobe Digital Editions or other reading app from the Google Play Store
+- Push the e-book to the file system
+
+```bash
+adb push <e-book-name> /storage/emulated/0/Digital\ Editions/
+```
+- If you want to push other files to the device and you’re having difficulty navigating adb shell, you can use `adb shell` with `ls` and `grep` as documented here: [https://stackoverflow.com/questions/16796432/how-to-list-all-the-files-in-android-phone-by-using-adb-shell](https://stackoverflow.com/questions/16796432/how-to-list-all-the-files-in-android-phone-by-using-adb-shell)
 
 TODO: Reasearch automated testing tools to use with Android Studio.
 
