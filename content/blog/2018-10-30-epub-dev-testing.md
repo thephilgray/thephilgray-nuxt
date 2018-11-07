@@ -25,9 +25,59 @@ Download the [Readium Cloud Reader Lite](https://github.com/readium/readium-js-v
 
 One of the nicest things about developing your EPUB with a reader in the browser is that you have full access to your browser's dev tools for inspecting and debugging.
 
-TODO: Try running Readium Cloud Reader Lite with an automated testing tool that runs in the browser like Cypress.
-
 See: [Using the CloudReader to Test EPUB Publications](https://readium.org/technical/technical-notes/_posts/testing-with-cloudreader/).
+
+##### Notes On Automated Testing with Cypress
+
+- Set `chromeWebSecurity` to `false` in Cypress config (`cypress.json`)
+
+```json
+{ "chromeWebSecurity": false }
+
+```
+
+- Refer to this [solution](https://github.com/cypress-io/cypress/issues/715#issuecomment-402314281) for accessing the iframe
+
+
+```js
+
+// plugins/index.js
+
+module.exports = (on, config) => {
+
+  on('before:browser:launch', (browser = {}, args) => {
+    console.log(browser, args); // see what all is in here!
+
+    if (browser.name === 'chrome') {
+      args.push('--disable-site-isolation-trials');
+
+      // whatever you return here becomes the new args
+      return args;
+    }
+  });
+};
+
+// example unit test
+
+/// <reference types="Cypress" />
+
+context('Actions', () => {
+  beforeEach(() => {
+    cy.visit(
+      'http://localhost:3000/index.html?epub=epub_content/test-ebook'
+    );
+  });
+  
+  it('Renders the ebook cover page', () => {
+    cy.wait(3000); // allow some time for Readium to load the epub
+    cy.get('#epub-reader-frame iframe').then(iframe => {
+      const doc = iframe.contents();
+      doc.get('#cover');
+    });
+  });
+});
+
+```
 
 #### MacOS/iOS
 
