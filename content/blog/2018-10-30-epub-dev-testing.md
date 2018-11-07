@@ -133,5 +133,8 @@ adb push <e-book-name> /storage/emulated/0/Digital\ Editions/
 ```
 - If you want to push other files to the device and you’re having difficulty navigating adb shell, you can use `adb shell` with `ls` and `grep` as documented here: [https://stackoverflow.com/questions/16796432/how-to-list-all-the-files-in-android-phone-by-using-adb-shell](https://stackoverflow.com/questions/16796432/how-to-list-all-the-files-in-android-phone-by-using-adb-shell)
 
-TODO: Reasearch automated testing tools to use with Android Studio.
+##### TODOS
+- Write custom scripts for quickly spinning up emulators and sideloading GApps and ebooks
+- Reasearch automated testing for Android Studio emulators
+- Look into possibly using [Genymotion](https://www.genymotion.com/desktop/) for emulation
 
