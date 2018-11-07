@@ -52,7 +52,7 @@ One approach I've been thinking about for a while is to use Android Studio to lo
 
 - Create a new emulator <emulator-name> in Android Studio or use CLI command
 
-- Start emulator in writable mode (may need to wipe user data if emulator was created previously and is not booting)
+- Start emulator in writable mode (may need to wipe user data if emulator was created previously and is not booting or run emulator command with `-no-snapshot` flag)
 ```bash
 emulator @<emulator-name> -writable-system &
 ```
