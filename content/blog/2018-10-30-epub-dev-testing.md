@@ -137,4 +137,5 @@ adb push <e-book-name> /storage/emulated/0/Digital\ Editions/
 - Write custom scripts for quickly spinning up emulators and sideloading GApps and ebooks
 - Reasearch automated testing for Android Studio emulators
 - Look into possibly using [Genymotion](https://www.genymotion.com/desktop/) for emulation
+- Build a console tool for debugging
 
