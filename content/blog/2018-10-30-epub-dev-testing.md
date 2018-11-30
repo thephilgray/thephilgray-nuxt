@@ -79,6 +79,9 @@ context('Actions', () => {
 
 ```
 
+##### TODOS
+- Integrate accessibility testing (a subset of the features provided by [Lighthouse](https://github.com/GoogleChrome/lighthouse))
+
 #### MacOS/iOS
 
 If you're developing EPUBs on MacOS, you have access to Apple's Books app. This is a great tool for development because Books exposes has two awesome features for savy users: the [Book Proofing Tool](https://help.apple.com/itc/booksassetguide/#/itc073460726) and [Safari Web Inspector](https://help.apple.com/itc/booksassetguide/#/itc5905301b7). Follow the instructions in the previous links to the Apple Books Asset Guide. 
