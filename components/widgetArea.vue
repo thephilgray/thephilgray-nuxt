@@ -6,9 +6,10 @@
       section.widget-content
         h3   Phil Gray
         p 
-          em Web Consultant, Developer, and Content Specialist
+          em Web Developer 
+          br 
+          span Node + React/Vue + CSS
         footer.widget-footer
-          p @thephilgray
           .socialFollow
             a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
               i.icon-twitter
