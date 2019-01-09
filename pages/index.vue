@@ -9,13 +9,13 @@ main
     p {{post.gsx$date.$t}}
 </template>
 <script>
-import twitter from 'twitter-text';
+import twitter from "twitter-text";
 export default {
   async asyncData({ app }) {
     //eslint-disable-next-line
-    console.log(app.$content);
+    // console.log(app.$content);
     const posts = await app.$axios.$get(
-      'https://spreadsheets.google.com/feeds/list/18Cp7E1R8ZRWp-W4vQ1TbhbWLU8rB-jQ-DN9Tp2cur6c/od6/public/values?alt=json'
+      "https://spreadsheets.google.com/feeds/list/18Cp7E1R8ZRWp-W4vQ1TbhbWLU8rB-jQ-DN9Tp2cur6c/od6/public/values?alt=json"
     );
     const latestPosts = posts.feed.entry.slice(-3).reverse();
     return { latestPosts };
@@ -23,7 +23,7 @@ export default {
 
   head() {
     return {
-      title: 'The Latest'
+      title: "The Latest"
     };
   },
 
