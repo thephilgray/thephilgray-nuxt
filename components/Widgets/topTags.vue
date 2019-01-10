@@ -14,8 +14,8 @@ export default {
     };
   },
   beforeMount: async function() {
-    const posts = await fetch("http://localhost:3000/content-api/blog/");
-    const projects = await fetch("http://localhost:3000/content-api/projects/");
+    const posts = await fetch("/content-api/blog/");
+    const projects = await fetch("/content-api/projects/");
     const allPosts = await posts.json();
     const allProjects = await projects.json();
 
