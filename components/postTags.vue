@@ -4,8 +4,9 @@
       span.post__tag(v-for="tag in tagsArrayAbridged")
         nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
       span.post__tag(v-if="maxReached")
-        span
+        span(v-if="linkMore")
           nuxt-link(:to="'/tags/'") more...
+        span(v-else) more...
     .post__tags(v-else)    
       span.post__tag(v-for="tag in tagsArray")
         nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
@@ -22,6 +23,10 @@ export default {
       default: 6
     },
     abridged: {
+      type: Boolean,
+      default: false
+    },
+    linkMore: {
       type: Boolean,
       default: false
     }

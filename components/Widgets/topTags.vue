@@ -1,6 +1,6 @@
 <template lang="pug">
     .widget
-      PostTags(:tags="tags" :max="20" abridged)        
+      PostTags(:tags="tags" :max="20" abridged linkMore)        
 </template> 
 <script>
 import axios from "axios";
