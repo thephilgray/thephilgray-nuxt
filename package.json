@@ -5,7 +5,7 @@
   "author": "phil.nametheanimal <phil.nametheanimal@gmail.com>",
   "private": true,
   "dependencies": {
-    "@nuxtjs/axios": "^4.5.2",
+    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/vuetify": "^0.4.2",
     "date-fns": "^1.29.0",
     "lodash": "^4.17.10",
