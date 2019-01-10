@@ -1,8 +1,9 @@
 <template lang="pug">
     .widget
-      PostTags(:tags="tags" :max="20" abridged)        
+      PostTags(:tags="tags" :max="20" abridged linkMore)        
 </template> 
 <script>
+import axios from "axios";
 import PostTags from "@/components/postTags";
 export default {
   components: {
@@ -14,25 +15,26 @@ export default {
     };
   },
   beforeMount: async function() {
-    const posts = await fetch("/content-api/blog/");
-    const projects = await fetch("/content-api/projects/");
-    const allPosts = await posts.json();
-    const allProjects = await projects.json();
+    const posts = await axios.get("/content-api/blog/");
+    const projects = await axios.get("/content-api/projects/");
+    const allPosts = await posts.data;
+    const allProjects = await projects.data;
 
     const all = [...allPosts, ...allProjects];
     const map = all
       .map(item => item.tags.split(",").map(tag => tag.trim()))
       .reduce((acc, curr) => acc.concat(curr), [])
       .reduce((acc, curr) => {
-        if (Object.values(acc).indexOf(curr) == -1) {
+        if (Object.keys(acc).indexOf(curr) == -1) {
           acc[curr] = 1;
+        } else {
+          acc[curr]++;
         }
-        acc[curr]++;
         return acc;
       }, {});
 
     this.tags = Object.entries(map)
-      .filter((item, i, arr) => item[1] / arr.length > 0.025)
+      .sort((a, b) => b[1] - a[1])
       .map(item => item[0])
       .join(",");
   }
