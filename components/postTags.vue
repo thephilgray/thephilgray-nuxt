@@ -1,19 +1,21 @@
 <template lang="pug">
-  .post__tags(v-if="abridged")
-    span.post__tag(v-for="tag in tagsArrayAbridged")
-      nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
-    span.post__tag(v-if="maxReached")
-      span more...
-  .post__tags(v-else)    
-    span.post__tag(v-for="tag in tagsArray")
-      nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
+  div(v-if="tags")
+    .post__tags(v-if="abridged")
+      span.post__tag(v-for="tag in tagsArrayAbridged")
+        nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
+      span.post__tag(v-if="maxReached")
+        span
+          nuxt-link(:to="'/tags/'") more...
+    .post__tags(v-else)    
+      span.post__tag(v-for="tag in tagsArray")
+        nuxt-link(:to="'/tags/' + tag | slugify") {{tag}}
 </template>
 <script>
 export default {
   props: {
     tags: {
       type: String,
-      default: ''
+      default: ""
     },
     max: {
       type: Number,
@@ -26,14 +28,16 @@ export default {
   },
   computed: {
     tagsArray() {
-      return this.tags.split(',').map(tag => tag.trim());
+      return this.tags.split(",").map(tag => tag.trim());
     },
 
     maxReached() {
       return this.tagsArray.length > this.max;
     },
     tagsArrayAbridged() {
-      return this.maxReached ? this.tagsArray.slice(0, 5) : this.tagsArray;
+      return this.maxReached
+        ? this.tagsArray.slice(0, this.max - 1)
+        : this.tagsArray;
     }
   }
 };

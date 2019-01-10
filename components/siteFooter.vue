@@ -2,6 +2,6 @@
 footer.site-footer
   section.site-footer-content
     p &copy; 
-      span 2018
+      span {{new Date().getFullYear()}}
       |  Phil Gray
 </template>

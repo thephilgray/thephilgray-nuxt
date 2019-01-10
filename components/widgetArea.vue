@@ -6,15 +6,25 @@
       section.widget-content
         h3   Phil Gray
         p 
-          em Web Consultant, Developer, and Content Specialist
+          em Web Developer 
+          br 
+          span Node + React/Vue + CSS
         footer.widget-footer
-          p @thephilgray
           .socialFollow
             a.socialFollow__icon(href="https://twitter.com/thephilgray" alt="Follow me on Twitter") 
               i.icon-twitter
             a.socialFollow__icon(href="https://github.com/thephilgray" alt="Follow me on Github")
               i.icon-github
+      TopTags
 </template> 
+<script>
+import TopTags from "@/components/Widgets/topTags";
+export default {
+  components: {
+    TopTags
+  }
+};
+</script>
 <style lang="scss" scoped>
 .wiget-area {
   background-image: radial-gradient(
@@ -55,7 +65,7 @@
   width: 100%;
 }
 
-[class^='icon-'] {
+[class^="icon-"] {
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -63,11 +73,11 @@
 }
 
 .icon-twitter {
-  background: url('~assets/icons/twitter.svg');
+  background: url("~assets/icons/twitter.svg");
 }
 
 .icon-github {
-  background: url('~assets/icons/github.svg');
+  background: url("~assets/icons/github.svg");
 }
 
 .socialFollow__icon {

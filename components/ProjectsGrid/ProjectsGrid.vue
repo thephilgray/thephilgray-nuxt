@@ -4,7 +4,7 @@
       v-flex(xs12)
         .text-xs-center
           transition-group(name="badges" mode="out-in")
-            v-chip(v-for="category in categories" v-model="projectsObj[category].selected" close :color="categoryColor(category)" :text-color="categoryColor(category) === 'orange' ? 'white' : 'black'" :key="category")
+            v-chip(v-for="category in categories" v-model="projectsObj[category].selected" close :color="categoryColor(category)" text-color="black" :key="category")
               v-avatar
                 v-badge {{projectsObj[category].items.length}}
               | {{category}}
@@ -18,8 +18,8 @@
 
 </template>
 <script>
-import { uniq } from 'lodash';
-import Project from '@/components/ProjectsGrid/Project';
+import { uniq } from "lodash";
+import Project from "@/components/ProjectsGrid/Project";
 export default {
   components: {
     Project
@@ -60,7 +60,7 @@ export default {
       this.projectsObj = this.projects.reduce((acc, curr) => {
         // if there is no category in the current iteration, set category to 'Uncategorized'
         // if the accumulator does not contain a key for the current cateogry
-        const key = curr.category ? curr.category : 'uncategorized';
+        const key = curr.category ? curr.category : "uncategorized";
         if (!acc[key]) acc[key] = { items: [], selected: true };
         acc[key].items.push(curr);
         return acc;
@@ -68,27 +68,29 @@ export default {
       this.numberOfCategories = Object.keys(this.projectsObj).length;
     },
     categoryColor(category) {
+      // these are interpreted for their actual color values. temporarily overridden in css. TODO: implement custom vuetify theme
       const colors = {
-        demo: 'orange',
-        work: 'blue',
-        personal: 'pink',
-        uncategorized: 'blue'
+        demo: "orange",
+        work: "blue",
+        personal: "pink",
+        uncategorized: "blue"
       };
-      return colors[category] || 'blue';
+      return colors[category] || "blue";
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.chip.orange {
-  background: #df7c5b !important;
+/* TODO: remove color overrides and implement custom vuetify theme */
+.v-chip.orange {
+  background: rgba(223, 124, 91, 0.25) !important;
 }
-.chip.blue {
+.v-chip.blue {
   background: rgba(194, 234, 233, 1) !important;
 }
 
-.chip.pink {
+.v-chip.pink {
   background: rgba(250, 207, 215, 1) !important;
 }
 

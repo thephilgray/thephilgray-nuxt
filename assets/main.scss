@@ -1,161 +1,175 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font: 100%/1.6 'Lora', serif;
-  font-weight: 400;
-  padding: 1em 0.5em;
-  text-align: left;
-  font-kerning: normal;
+    font: 100%/1.6 'Lora', serif;
+    font-weight: 400;
+    padding: 1em 0.5em;
+    text-align: left;
+    font-kerning: normal;
 }
 
 p,
 li {
-  font-size: 1.6rem;
-  line-height: 1.6;
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 p,
 li {
-  margin-top: 16px;
-  margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 li {
-  margin-left: 1em;
+    margin-left: 1em;
 }
 
 a {
-  text-decoration: none;
-  color: #35468d;
-  &:hover {
-    color: #da795c;
-  }
+    text-decoration: none;
+    color: #35468d;
+    &:hover {
+        color: #da795c;
+    }
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 // modular scale
 h1 {
-  font-size: 2.488em;
+    font-size: 2.488em;
 }
 
 h2 {
-  font-size: 2.074em;
-  line-height: 1.6;
-  margin: 1em 0;
+    font-size: 2.074em;
+    line-height: 1.6;
+    margin: 1em 0;
 }
 
 h3 {
-  font-size: 1.728em;
-  margin: 1em 0;
-  line-height: 1.4;
+    font-size: 1.728em;
+    margin: 1em 0;
+    line-height: 1.4;
 }
 
 h4 {
-  font-size: 1.44em;
-  margin: 0.25em 0;
-  line-height: 1.4;
+    font-size: 1.44em;
+    margin: 0.25em 0;
+    line-height: 1.4;
 }
 
 h5 {
-  font-size: 1.2em;
-  margin: 0.25em 0;
+    font-size: 1.2em;
+    margin: 0.25em 0;
 }
 
 h6 {
-  font-size: 1em;
-  margin: 0.25em 0;
+    font-size: 1em;
+    margin: 0.25em 0;
 }
 
 h1 {
-  letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
 }
 
 span {
-  font-variant-numeric: oldstyle-nums;
+    font-variant-numeric: oldstyle-nums;
 }
 
 // custom button classes
 .btn {
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #fff;
 }
 
 .btn--full-width {
-  width: 100%;
+    width: 100%;
 }
 
 // nuxt page transitions
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
 
 .page-enter,
 .page-leave-to {
-  opacity: 0;
+    opacity: 0;
 }
 
 // base print styles
 @media print {
-  .site-header,
-  .wiget-area,
-  .site-footer,
-  .icon-printer,
-  .icons {
-    display: none;
-  }
+    .site-header,
+    .wiget-area,
+    .site-footer,
+    .icon-printer,
+    .icons {
+        display: none;
+    }
 }
 
 // prismjs - force long code blocks to wrap
 code {
-  background: #f8efb6;
-  vertical-align: 1px;
+    background: #f8efb6;
+    vertical-align: 1px;
+    box-shadow: none;
+    &:not([class*='language-']) {
+        padding: 0 0.25em;
+    }
 }
 
 .post li code,
 .post p code {
-  overflow-wrap: break-word;
-  word-break: break-all;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 pre[class*='language-'] {
-  margin: 4em -2em !important;
-  padding: 1em;
+    // margin: 4em -2em !important;
+    // padding: 1em 1em 0 !important;
+    padding: 1em 1em 0.5em !important;
 }
 
 code[class*='language-'] {
-  overflow-x: auto !important;
+    overflow-x: auto !important;
+    width: 100%;
+}
+
+code:after,
+kbd:after,
+code:before,
+kbd:before {
+    content: '';
+    letter-spacing: -1px;
 }
 
 .posts,
 .post {
-  max-width: 50em;
-  padding: 1em;
-  margin: auto !important;
-  .post__body a {
-    font-weight: 600;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-  }
+    max-width: 50em;
+    padding: 1em;
+    margin: auto !important;
+    .post__body a {
+        font-weight: 600;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-  .posts,
-  .post {
-    max-width: 800px;
-    padding: 0;
-  }
-  pre[class*='language-'] {
-    margin: 3em 0 !important;
-  }
+    .posts,
+    .post {
+        max-width: 800px;
+        padding: 0;
+    }
+    pre[class*='language-'] {
+        // margin: 3em 0 !important;
+    }
 }
