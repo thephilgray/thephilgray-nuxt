@@ -24,15 +24,16 @@ export default {
       .map(item => item.tags.split(",").map(tag => tag.trim()))
       .reduce((acc, curr) => acc.concat(curr), [])
       .reduce((acc, curr) => {
-        if (Object.values(acc).indexOf(curr) == -1) {
+        if (Object.keys(acc).indexOf(curr) == -1) {
           acc[curr] = 1;
+        } else {
+          acc[curr]++;
         }
-        acc[curr]++;
         return acc;
       }, {});
 
     this.tags = Object.entries(map)
-      .filter((item, i, arr) => item[1] / arr.length > 0.025)
+      .sort((a, b) => b[1] - a[1])
       .map(item => item[0])
       .join(",");
   }
