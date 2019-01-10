@@ -1,164 +1,44 @@
 <template lang="pug">
 div
-  header.main-header
-    h1.main-header__name Phil Gray
-    Media(:query="{print:true}")
-      p.main-header__title
-        strong Web Consultant / Developer
-        br
-        |
-        a(href="http://thephilgray.com") thephilgray.com
-        br
-        |
-        a(href="mailto:thephilgray@gmail.com") thephilgray@gmail.com
+  ResumeHeader
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Web developer with emphasis on UX and the front-end and a background in digital marketing, web content development, and technical writing.
-      section.skills-and-tools
-        article.skills-and-tools__skills
-          h2 Skills
-          Media(:query="{screen:true}")
-            .skills-and-tools__skills-list
-              .skills-and-tools__skills-item(v-for="(skill, index) in skills")
-                .skills-item__icon(:style="{backgroundPosition: index * -98 + 'px 0'}")
-                .skills-item__header
-                  h3 {{skill.title}}
-                //- .skills-item__graphic
-                //-   .skills-item__graphic--percentage(:style="{width: skill.level + '%'}")
-                //-     small {{skill.level}}%
-          Media(:query="{print:true}")
-            p
-              span(v-for="(skill, i) in allSkills")
-                span(v-if="i < allSkills.length - 1") {{skill}}, 
-                span(v-else) {{skill}}
-                
-        article.skills-and-tolls__tools
-          h2 Tools
-          p CSS, SASS, HTML5, Pug, JavaScript, NodeJS, PhotoShop, Sketch, Figma, Illustrator, Bootstrap, Vuetify, Material-UI, Express, VueJS, React, jQuery, Next, Nuxt, Jekyll, Chai, Mocha, Jest, Git, Gulp, Webpack, MongoDB, Firebase, GraphQL, Redux, Apollo
-          .icons
-            .icon-css.icon-css-dims
-            .icon-sass.icon-sass-dims
-            .icon-html5.icon-html5-dims
-            .icon-js.icon-js-dims
-            .icon-es6.icon-es6-dims
-            .icon-pug.icon-pug-dims
-            .icon-vue.icon-vue-dims
-            .icon-react.icon-react-dims
-            .icon-angular.icon-angular-dims
-            .icon-jquery.icon-jquery-dims
-            .icon-mongodb.icon-mongodb-dims
-            .icon-nodejs.icon-nodejs-dims
-            .icon-webpack.icon-webpack-dims
-            .icon-git.icon-git-dims
-            .icon-gulp.icon-gulp-dims
-            .icon-sketch.icon-sketch-dims
-            .icon-bootstrap.icon-bootstrap-dims
-            .icon-wordpress.icon-wordpress-dims
-      transition(name="reveal")
-        section.eductation-and-certs(v-if="showRelevant")
-          article.eductation-and-certs__education
-            h2 Education
-            p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
-          article.eductation-and-certs__education  
-            h2 Certifications
-            p (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
-              br
-              | Comp TIA Security+ Certification (2013 – 2016, inactive)
-            article.relevant-experience
-              h2 Relevant Experience
-              .relevant-experience__list
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 11/2017 – present
-                    .relevant-experience__location
-                      small Washington, DC
-                  h4.relevant-experinece__title Independent Consultant
-                  p.relevant-experinece__description Provides web consulting, training, and services to BSA | The Software Alliance and other local businesses.
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 04/2015 – 11/2017
-                    .relevant-experience__location
-                      small Washington, DC    
-                  h3.relevant-experinece__company BSA | The Software Alliance
-                  h4.relevant-experinece__title Digital Manager
-                  p.relevant-experinece__description Managed sites for global organization and helped launch its foundation, Software.org. Oversaw content management, development, reporting, and migrations. Designed and developed interactive features, themes, emails, surveys, and microsites.
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 11/2014 – 04/2015
-                    .relevant-experience__location
-                      small Washington, DC      
-                  h3.relevant-experinece__company Department of Labor
-                  h4.relevant-experinece__title Release Management Coordinator, Data Specialist
-                    span &nbsp;(contractor)
-                  p.relevant-experinece__description Coordinated testing and deployment with federal customer and developers. Supported the technology team with application testing, workflow analysis, reporting, data entry, data analysis, and documentation.
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 04/2014 – 11/2014
-                    .relevant-experience__location
-                      small Herndon, VA    
-                  h3.relevant-experinece__company BAE Systems IT
-                  h4.relevant-experinece__title Technical Writer
-                    span &nbsp;(contractor)
-                  p.relevant-experinece__description Supported the Service Management and Engineering Framework Management teams, helping to maintain and improve ITIL-based policies, processes, and procedures.
-                .relevant-experience__item
-                  .relevant-experience__years
-                    span 12/2010 – 04/2014
-                    .relevant-experience__location
-                      small Portland, Oregon
-                  h3.relevant-experinece__company ITPDX
-                  h4.relevant-experinece__title Web Content Editor, Technical Writer, Copywriter
-                    span &nbsp;(independent consultant)
-                  p.relevant-experinece__description Wrote user and API documentation for custom e-commerce solutions. Provided web content management and training.
+      p Human developer with fullstack skills, a passion for building better interfaces and time-saving tools, and experience interfacing with clients and working on teams in a variety of roles.
+      SkillsAndTools
+      EducationAndExperience(:showRelevant="showRelevant")
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
-import Media from 'vue-media';
-import '~/assets/icons/icons.svg';
-import '~/assets/iconizr-svg-sprite.css';
+import ResumeHeader from "@/components/Resume/ResumeHeader";
+import SkillsAndTools from "@/components/Resume/SkillsAndTools";
+import EducationAndExperience from "@/components/Resume/EducationAndExperience";
 export default {
   components: {
-    Media
+    ResumeHeader,
+    SkillsAndTools,
+    EducationAndExperience
   },
   data() {
     return {
-      skills: [
-        { title: 'Web Design | Theming', level: 90 },
-        { title: 'Animation | Visualization', level: 80 },
-        { title: 'Wireframes | Prototyping', level: 90 },
-        { title: 'Documentation | Workflows', level: 90 },
-        { title: 'UI Design | Style Guides', level: 90 },
-        { title: 'Web App Development | Testing', level: 70 },
-        { title: 'Consulting | Project Management', level: 80 }
-      ],
-      allSkills: [
-        'Web Design',
-        'Theming',
-        'Animation',
-        'Visualization',
-        'Wireframes',
-        'Prototyping',
-        'Documentation',
-        'Workflows',
-        'UI Design',
-        'Style Guides',
-        'Web App Development',
-        'Testing',
-        'Consulting',
-        'Project Management'
-      ],
       showRelevant: false
     };
   },
   head() {
     return {
-      title: 'Resume'
+      title: "Resume"
     };
   }
 };
 </script>
 
 <style lang="scss" scoped>
+span {
+  font-variant-numeric: oldstyle-nums;
+}
+p span {
+  word-wrap: auto;
+}
 p,
 li {
   font-size: 1.2em;
@@ -176,19 +56,38 @@ li {
   margin-left: 2em;
 }
 
-a {
+h1 {
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  margin: 0;
+}
+p {
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
+li {
+  margin: 0;
+  text-indent: 0.5em;
+  margin-left: 2em;
+}
+
+/* a {
   text-decoration: none;
   color: #35468d;
   &:hover {
     color: #da795c;
   }
-}
+} */
 
 img {
   max-width: 100%;
 }
 
 // modular scale
+
 h1 {
   font-size: 2.488em;
 }
@@ -199,11 +98,12 @@ h2 {
   margin: 0.25em 0;
 }
 
-h3 {
+/* h3 {
   font-size: 1.728em;
   margin: 0.25em 0;
+  margin: 0;
   line-height: 1.4;
-}
+} */
 
 h4 {
   font-size: 1.44em;
@@ -222,20 +122,10 @@ h6 {
   margin: 0.25em 0;
 }
 
-h1 {
-  letter-spacing: 0.1em;
-}
-
-span {
-  font-variant-numeric: oldstyle-nums;
-}
-p span {
-  word-wrap: auto;
-}
-
+/* 
 .main-header__title {
   text-align: right;
-}
+} */
 
 // custom button classes
 
@@ -269,31 +159,16 @@ p span {
 
 // base print styles
 
-@media print {
+/* @media print {
   .site-header,
   .wiget-area,
   .site-footer,
-  .icon-printer,
   .icons {
     display: none;
   }
-}
+} */
 
-h1 {
-  margin: 0;
-}
-p {
-  font-size: 1.2em;
-  line-height: 1.2;
-}
-
-li {
-  margin: 0;
-  text-indent: 0.5em;
-  margin-left: 2em;
-}
-
-.main-header {
+/* .main-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -302,39 +177,25 @@ li {
 
 .main-header__name {
   padding-right: 1em;
-}
+} */
 
-article.skills-and-tolls__icons {
+/* article.skills-and-tolls__icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
-.icons {
+/* .icons {
   display: flex;
   flex-wrap: wrap;
-  /*     justify-content: space-between; */
 }
 
-[class^='icon'] {
+[class^="icon"] {
   margin: 0.5em;
-}
+} */
 
-.icon-printer {
-  display: none;
-  float: right;
-  height: 3em;
-  width: 3em;
-  background-size: 100%;
-  background: url('~assets/icons/printer.svg');
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
+/* @media screen and (min-width: 768px) {
 
-@media screen and (min-width: 768px) {
-  .icon-printer {
-    display: block;
-  }
   .skills-and-tools__skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -359,7 +220,7 @@ article.skills-and-tolls__icons {
   display: block;
   width: 100px;
   height: 100px;
-  background-image: url('~assets/custom-icons-blue.svg');
+  background-image: url("~assets/custom-icons-blue.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   margin: 0 auto;
@@ -383,9 +244,9 @@ article.skills-and-tolls__icons {
   color: #262427;
   text-align: center;
   font-weight: 700;
-}
+} */
 
-.relevant-experience__years {
+/* .relevant-experience__years {
   margin: 0.5em 0;
 }
 
@@ -410,9 +271,9 @@ article.skills-and-tolls__icons {
 
 .relevant-experience__item:not(:first-child) .relevant-experinece__title {
   font-size: 100%;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .relevant-experience__list {
     display: grid;
     grid-gap: 1em;
@@ -442,9 +303,9 @@ article.skills-and-tolls__icons {
       border-bottom: 2px solid #262427;
     }
   }
-}
+} */
 
-.reveal-enter-active,
+/* .reveal-enter-active,
 .reveal-leave-active {
   transition: opacity 0.25s ease-out;
 }
@@ -452,16 +313,17 @@ article.skills-and-tolls__icons {
 .reveal-enter,
 .reveal-leave-to {
   opacity: 0;
-}
+} */
 
 @media print {
   .site-header,
   .wiget-area,
-  .icon-printer,
+  /* .icon-printer, */
   .icons,
   .btn,
-  .skills-item__icon,
-  .skills-item__graphic {
+  /* .skills-item__icon,
+  .skills-item__graphic  */
+ {
     display: none;
   }
   // h1:after {
@@ -469,12 +331,12 @@ article.skills-and-tolls__icons {
   //   display: block;
   //   font-size: 0.5em;
   // }
-  .skills-and-tools__skills-list {
+  /* .skills-and-tools__skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
-  }
-  article.relevant-experience {
+  } */
+  /* article.relevant-experience {
     page-break-before: always; //TODO: hack
   }
 
@@ -515,13 +377,13 @@ article.skills-and-tolls__icons {
   }
   .relevant-experience__location {
     border-bottom: 0.25em solid #999;
-  }
-  .skills-and-tools__skills-list {
+  } */
+  /* .skills-and-tools__skills-list {
     font-size: 1.2em;
     line-height: 1.2;
     display: inline;
     &:after {
-      content: '';
+      content: "";
       display: table;
       clear: both;
     }
@@ -538,7 +400,7 @@ article.skills-and-tolls__icons {
   .skills-and-tools__skills-item + .skills-and-tools__skills-item:before {
     display: inline-block;
     float: left;
-    content: ',\00a0';
+    content: ",\00a0";
   }
   .skills-item__header {
     h3 {
@@ -551,6 +413,6 @@ article.skills-and-tolls__icons {
       -webkit-margin-end: 0;
       font-weight: normal;
     }
-  }
+  } */
 }
 </style>
