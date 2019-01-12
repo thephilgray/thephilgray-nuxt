@@ -63,10 +63,6 @@ h1 {
 h1 {
   margin: 0;
 }
-p {
-  font-size: 1.2em;
-  line-height: 1.2;
-}
 
 li {
   margin: 0;
