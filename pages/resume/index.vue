@@ -4,7 +4,7 @@ div
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Human developer with fullstack skills, a passion for building better interfaces and time-saving tools, and experience interfacing with clients and working on teams in a variety of roles.
+      p Frontend developer with fullstack skills, a passion for building better interfaces and time-saving tools, and broad industry experience interfacing with clients and supporting development teams in a variety of roles.
       SkillsAndTools
       EducationAndExperience(:showRelevant="showRelevant")
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}

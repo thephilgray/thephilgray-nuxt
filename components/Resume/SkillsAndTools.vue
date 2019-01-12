@@ -18,7 +18,8 @@ section.skills-and-tools
         p
           span(v-for="(tool, i) in tools") {{tool.title + (tools.length - i === 1 ? "" : ",")}} 
           .icons
-              div(v-for="(tool, i) in tools", :class="['icon-' + tool.icon, 'icon-' + tool.icon + '-dims']")    
+            template(v-for="(tool, i) in tools")
+              div(v-if="tool.icon" :class="['icon-' + tool.icon, 'icon-' + tool.icon + '-dims']")    
 </template>
 <script>
 import Media from "vue-media";
@@ -40,11 +41,15 @@ export default {
         { title: "Consulting | Project Management", level: 80 }
       ],
       tools: [
-        { title: "CSS", icon: "css3" },
+        { title: "CSS3", icon: "css3" },
         { title: "SASS", icon: "sass" },
+        { title: "LESS", icon: "less" },
         { title: "HTML5", icon: "html5" },
         { title: "Pug", icon: "pug" },
+        { title: "EJS" },
+        { title: "Handlebars", icon: "handlebars" },
         { title: "JavaScript", icon: "javascript" },
+        { title: "TypeScript", icon: "typescript" },
         { title: "NodeJS", icon: "nodejs" },
         { title: "PhotoShop", icon: "photoshop" },
         { title: "Sketch", icon: "sketch" },
@@ -53,24 +58,30 @@ export default {
         { title: "Bootstrap", icon: "bootstrap" },
         { title: "Vuetify", icon: "vuetify" },
         { title: "Material-UI", icon: "material-ui" },
-        { title: "Express", icon: "express" },
-        { title: "VueJS", icon: "vuejs" },
-        { title: "React", icon: "react" },
+        { title: "Styled Components" },
         { title: "jQuery", icon: "jquery" },
+        { title: "React", icon: "react" },
+        { title: "Gatsby" },
         { title: "Next", icon: "nextjs" },
+        { title: "VueJS", icon: "vuejs" },
         { title: "Nuxt", icon: "nuxt" },
+        { title: "Jekyll" },
+        { title: "Redux", icon: "redux" },
+        { title: "GraphQL", icon: "graphql" },
+        { title: "Apollo", icon: "apollo" },
         { title: "Mocha", icon: "mocha" },
         { title: "Jest", icon: "jest" },
-        { title: "Git", icon: "git" },
         { title: "Gulp", icon: "gulp" },
         { title: "Webpack", icon: "webpack" },
-        { title: "GraphQL", icon: "graphql" },
-        { title: "Redux", icon: "redux" },
-        { title: "Apollo", icon: "apollo" },
+        { title: "Express", icon: "express" },
         { title: "MongoDB", icon: "mongodb" },
         { title: "Firebase", icon: "firebase" },
+        { title: "Prisma" },
         { title: "Amazon Web Services", icon: "aws" },
-        { title: "Heroku", icon: "heroku" }
+        { title: "Heroku", icon: "heroku" },
+        { title: "Netlify" },
+        { title: "Git", icon: "git" },
+        { title: "Bash" }
       ],
       allSkills: [
         "Web Design",
