@@ -1,25 +1,15 @@
 <template lang="pug">
-  transition(name="reveal")
-    section.eductation-and-certs(v-if="showRelevant")
-      Experience
-      Education
+  section
+    article.eductation-and-certs__education
+      h2 Education
+      p Virginia Commonwealth University, Richmond, VA <br/>B.A. English (2005 – 2008), minor in Writing, summa cum laude, 3.9 GPA
+    article.eductation-and-certs__education  
+      h2 Certifications
+      p (MCSD: 70-480) Programming in HTML5 with JavaScript and CSS3 (2014)
+        br
+        | Comp TIA Security+ Certification (2013 – 2016, inactive)
 </template>
-<script>
-import Experience from "./Experience";
-import Education from "./Education";
-export default {
-  components: {
-    Experience,
-    Education
-  },
-  props: {
-    showRelevant: {
-      type: Boolean,
-      default: false
-    }
-  }
-};
-</script>
+
 
 <style lang="scss" scoped>
 span {
