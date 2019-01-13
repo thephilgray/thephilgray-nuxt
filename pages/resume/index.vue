@@ -4,19 +4,22 @@ div
   section.main-section
     article.main-section__overview
       h2 Overview
-      p Frontend developer with fullstack skills, a passion for building better interfaces and time-saving tools, and broad industry experience interfacing with clients and supporting development teams in a variety of roles.
-      SkillsAndTools
+      p Fullstack developer with frontend experience.
+      Tools
+      //- Projects
       EducationAndExperience(:showRelevant="showRelevant")
       .btn.btn--full-width(@click="showRelevant = !showRelevant") Show {{!showRelevant ? 'More' : 'Less'}}
 </template>
 <script>
 import ResumeHeader from "@/components/Resume/ResumeHeader";
-import SkillsAndTools from "@/components/Resume/SkillsAndTools";
+import Tools from "@/components/Resume/Tools";
+import Projects from "@/components/Resume/Projects";
 import EducationAndExperience from "@/components/Resume/EducationAndExperience";
 export default {
   components: {
     ResumeHeader,
-    SkillsAndTools,
+    Projects,
+    Tools,
     EducationAndExperience
   },
   data() {
