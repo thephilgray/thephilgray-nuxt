@@ -1,8 +1,8 @@
 <template lang="pug">
   transition(name="reveal")
     section.eductation-and-certs(v-if="showRelevant")
-      Experience
       Education
+      Experience
 </template>
 <script>
 import Experience from "./Experience";
