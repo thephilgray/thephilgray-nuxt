@@ -1,7 +1,10 @@
 ---
-title: Build a Blog with Gatsby, Part 1
-tags: Gatsby, React, Node, JavaScript, GraphQL
-abstract: I decided to rebuild my site with Gatsby and Netlify. The first post describes basic setup and getting the blog up functionality and running.
+title: 'Build a Blog with Gatsby, Part 1'
+tags: 'Gatsby, React, Node, JavaScript, GraphQL'
+abstract: >-
+  I decided to rebuild my site with Gatsby and Netlify. The first post describes
+  basic setup and getting the blog up functionality and running.
+published: true
 ---
 
 The repo for this project can be found here: [https://github.com/thephilgray/thephilgray-gatsby](https://github.com/thephilgray/thephilgray-gatsby)
@@ -245,7 +248,7 @@ We can set the body of the post by creating an element with the attribute `dange
 import React from 'react';
 import { graphql } from 'gatsby';
 
-export default function BlogPost({ data, location }) {
+export default function BlogPost({ data }) {
   const { markdownRemark } = data;
   return (
     <article>
