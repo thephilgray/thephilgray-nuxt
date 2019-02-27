@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import BlogPostListing from '@/components/blogPostListing';
-import PaginationControls from '@/components/paginationControls';
+import BlogPostListing from "@/components/blogPostListing";
+import PaginationControls from "@/components/paginationControls";
 
 export default {
   components: {
@@ -14,19 +14,19 @@ export default {
     PaginationControls
   },
   async asyncData({ app }) {
-    const allPosts = await app
-      .$content('/blog')
-      .query({ exclude: ['attributes', 'body'] })
-      .getAll();
+    const allPosts = await app.$content("/blog").getAll();
+    let posts = allPosts;
+    let numberOfPages = 1;
+
     return {
-      posts: await app.$content('/blog').getOnly(0, 4),
-      numberOfPages: Math.ceil(allPosts.length / 5)
+      posts,
+      numberOfPages
     };
   },
 
   head() {
     return {
-      title: 'Blog'
+      title: "Blog"
     };
   }
 };
