@@ -30,13 +30,13 @@
   },
   "scripts": {
     "dev": "nuxt",
-    "codeanywhere": "HOST=0.0.0.0 PORT=3000 nuxt",
     "build": "NODE_ENV='production' nuxt build",
     "start": "NODE_ENV='production' nuxt start",
     "heroku-postbuild": "npm run build",
-    "generate": "nuxt generate",
+    "generate": "NODE_ENV=STATIC nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "serve-static": "serve ./dist -p 3000"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -46,6 +46,7 @@
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^2.0.1",
-    "eslint-plugin-vue": "^4.7.1"
+    "eslint-plugin-vue": "^4.7.1",
+    "serve": "^10.1.2"
   }
 }
