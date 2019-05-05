@@ -3,7 +3,7 @@ title: Software Studies Microsites
 lead: Transforming Ink Into Pixels
 category: work
 abstract: Create responsive sites from print handouts meant to educate policymakers about the value of encryption and software.
-image: https://dzwonsemrish7.cloudfront.net/items/053Y2W2Z162n401R3x15/%5Bb1cc2a8f0861d9bb47926d01103af9f4%5D_encryption2.png?v=9ef34461
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/%5Bb1cc2a8f0861d9bb47926d01103af9f4%5D_encryption2.png
 tags: SASS, SMACSS, Responsive Design, jQuery
 ---
 

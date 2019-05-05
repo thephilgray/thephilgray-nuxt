@@ -3,7 +3,7 @@ title: Software.org
 lead: Planning a New Site for a New Foundation
 category: work
 abstract: Work with an agency and various stakeholders to realize a new foundation site. Create rich interactive pages and features.
-image: https://dzwonsemrish7.cloudfront.net/items/2E0O3O2U403Z0L2y2v1i/%5Bbafb01910d6bc74063008ad51d7844d3%5D_iot2.png?v=ac9186ef
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/%5Bbafb01910d6bc74063008ad51d7844d3%5D_iot2.png
 tags: CSS, Prototypes, Project Management, Content Management, Bootstrap
 ---
 
