@@ -4,7 +4,7 @@ lead: Creating a Personal Portfolio Site with NuxtJS
 abstract: >-
   Server-rendered, markdown-powered Nuxt site.
 category: personal
-image: https://dzwonsemrish7.cloudfront.net/items/0C380Q0S1S1G413D1z3e/Image%202018-06-08%20at%208.16.37%20PM.png?v=d7ce2bdb
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/Image+2018-06-08+at+8.16.37+PM.png
 tags: VueJS, Nuxt, Axios, SASS, SVG, CSS
 published: true
 ---

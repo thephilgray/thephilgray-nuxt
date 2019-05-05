@@ -3,7 +3,7 @@ title: Album Collector
 lead: Approaches in Full-Stack App Development with React and VueJS
 abstract: An app for posting and sharing reviews of your favorite albums.
 category: demo
-image: https://dzwonsemrish7.cloudfront.net/items/1T2b2G1b0x3y0x3o3Y3X/Image%202018-06-08%20at%208.14.28%20PM.png?v=3335965c
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/Image+2018-06-08+at+8.14.28+PM.png
 tags: Node, React, VueJS, Redux, Vuex, Storybook, Axios, Styled Components, SASS, SVG, MongoDB, Prisma, GraphQL, FireBase, Serverless
 ---
 

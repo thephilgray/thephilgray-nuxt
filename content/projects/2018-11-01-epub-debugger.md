@@ -2,7 +2,7 @@
 title: EPUB-debugger
 abstract: A frontend plugin for debugging scripted EPUBs.
 category: work
-image: https://duaw26jehqd4r.cloudfront.net/items/311J0h2b3I361g293L1R/Image%202019-01-10%20at%206.20.38%20PM.png?v=fe4efbc6
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/epubdebugger.png
 tags: JavaScript, CSS, EPUB, E-books, Gulp
 published: true
 ---

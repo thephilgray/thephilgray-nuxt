@@ -2,8 +2,7 @@
 title: Custom Readaloud Plugin for EPUBs
 abstract: A frontend plugin designed as a text and audio synchronization alternative to EPUB Media Overlays.
 category: work
-image: >-
-  https://duaw26jehqd4r.cloudfront.net/items/2a2i0F2445230i203Q2b/Image%202019-01-10%20at%205.00.52%20PM.png?v=17caeb5b
+image: https://s3.amazonaws.com/pg-image-host/thepg/screens/customreadaloud.png
 tags: JavaScript, EPUB, E-books, Webpack
 published: true
 ---
